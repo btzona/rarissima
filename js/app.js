@@ -8,9 +8,12 @@
   const searchInput = document.getElementById("search");
   const filterBtns = Array.from(document.querySelectorAll("[data-filter]"));
 
+  const pageSize = 18;
+
   let data = null;
   let filter = "all";
   let query = "";
+  let visibleCount = pageSize;
 
   const monthNames = [
     "Jan", "Feb", "Mar", "Apr", "May", "Jun",
@@ -92,6 +95,28 @@
     }
   }
 
+  function phoenixYearMonth(iso) {
+    const d = new Date(iso);
+    if (Number.isNaN(d.getTime())) return "unknown";
+    const parts = new Intl.DateTimeFormat("en-US", {
+      timeZone: "America/Phoenix",
+      year: "numeric",
+      month: "2-digit",
+    }).formatToParts(d);
+    const year = parts.find((part) => part.type === "year");
+    const month = parts.find((part) => part.type === "month");
+    if (!year || !month) return "unknown";
+    return `${year.value}-${month.value}`;
+  }
+
+  function monthLabel(key) {
+    if (key === "unknown") return "Date unknown";
+    const [year, month] = key.split("-");
+    const index = Number(month) - 1;
+    if (!year || index < 0 || index > 11) return "Date unknown";
+    return `${monthNames[index]} ${year}`;
+  }
+
   function setStatus(msg, state) {
     statusEl.textContent = msg;
     if (state) statusEl.dataset.state = state;
@@ -113,6 +138,35 @@
     return blob.includes(query);
   }
 
+  function cardHtml(article) {
+    const badge = article.rare
+      ? '<span class="badge">Rare / cryptic</span>'
+      : '<span class="badge muted">Entomology</span>';
+    const species =
+      article.species && article.species.length
+        ? `<p class="species"><span>Taxa</span>${article.species
+            .map((name) => `<em>${escapeHtml(name)}</em>`)
+            .join(" · ")}</p>`
+        : "";
+    return `
+<article class="card">
+  <div class="card-top">
+    ${badge}
+    <span class="source">${escapeHtml(article.source)}</span>
+  </div>
+  <h3><a href="${escapeHtml(article.link)}" rel="noopener noreferrer" target="_blank">${italicizeSpecies(
+      article.title,
+      article.species
+    )}</a></h3>
+  <p class="excerpt">${italicizeSpecies(article.summary, article.species)}</p>
+  ${species}
+  <div class="card-foot">
+    <time class="date" datetime="${escapeHtml(article.date || "")}">${formatDate(article.date)}</time>
+    <a class="outlink" href="${escapeHtml(article.link)}" rel="noopener noreferrer" target="_blank">Original</a>
+  </div>
+</article>`;
+  }
+
   function render() {
     if (!data) return;
     const items = (data.articles || []).filter(matches);
@@ -124,36 +178,37 @@
       return;
     }
 
-    grid.innerHTML = items
-      .map((a) => {
-        const badge = a.rare
-          ? '<span class="badge">Rare / cryptic</span>'
-          : '<span class="badge muted">Entomology</span>';
-        const species =
-          a.species && a.species.length
-            ? `<p class="species"><span>Taxa</span>${a.species
-                .map((s) => `<em>${escapeHtml(s)}</em>`)
-                .join(" · ")}</p>`
-            : "";
-        return `
-<article class="card">
-  <div class="card-top">
-    ${badge}
-    <span class="source">${escapeHtml(a.source)}</span>
-  </div>
-  <h2><a href="${escapeHtml(a.link)}" rel="noopener noreferrer" target="_blank">${italicizeSpecies(
-          a.title,
-          a.species
-        )}</a></h2>
-  <p class="excerpt">${italicizeSpecies(a.summary, a.species)}</p>
-  ${species}
-  <div class="card-foot">
-    <time class="date" datetime="${escapeHtml(a.date || "")}">${formatDate(a.date)}</time>
-    <a class="outlink" href="${escapeHtml(a.link)}" rel="noopener noreferrer" target="_blank">Original</a>
-  </div>
-</article>`;
-      })
-      .join("");
+    const shown = items.slice(0, visibleCount);
+    const groups = [];
+    for (const article of shown) {
+      const key = article.date ? phoenixYearMonth(article.date) : "unknown";
+      const last = groups[groups.length - 1];
+      if (!last || last.key !== key) groups.push({ key, items: [article] });
+      else last.items.push(article);
+    }
+
+    const more =
+      items.length > shown.length
+        ? `<div class="more-wrap"><button type="button" class="more" id="load-more">Show earlier specimens</button><p class="more-note">${shown.length} of ${items.length}</p></div>`
+        : "";
+
+    grid.innerHTML =
+      groups
+        .map(
+          (group) => `<section class="month">
+  <h2 class="month-label">${monthLabel(group.key)}</h2>
+  <div class="grid">${group.items.map(cardHtml).join("")}</div>
+</section>`
+        )
+        .join("") + more;
+
+    const moreBtn = document.getElementById("load-more");
+    if (moreBtn) {
+      moreBtn.addEventListener("click", () => {
+        visibleCount += pageSize;
+        render();
+      });
+    }
   }
 
   async function load() {
@@ -164,8 +219,15 @@
       data = await res.json();
       updatedEl.textContent = formatUpdated(data.updated);
       const rare = data.rare_count ?? (data.articles || []).filter((a) => a.rare).length;
+      const dated = (data.articles || [])
+        .map((article) => article.date)
+        .filter(Boolean)
+        .sort();
+      const span = dated.length
+        ? `${formatDate(dated[0])} – ${formatDate(dated[dated.length - 1])}`
+        : "dates unrecorded";
       setStatus(
-        `Catalogued ${data.article_count} items · ${rare} rare/cryptic-tagged · sources refreshed offline via fetch.py`
+        `Catalogued ${data.article_count} items · ${rare} rare/cryptic-tagged · ${span}`
       );
       render();
     } catch (err) {
@@ -182,6 +244,7 @@
   filterBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
       filter = btn.dataset.filter;
+      visibleCount = pageSize;
       filterBtns.forEach((b) =>
         b.setAttribute("aria-pressed", String(b === btn))
       );
@@ -194,6 +257,7 @@
     clearTimeout(t);
     t = setTimeout(() => {
       query = searchInput.value.trim().toLowerCase();
+      visibleCount = pageSize;
       render();
     }, 120);
   });

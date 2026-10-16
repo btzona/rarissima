@@ -96,11 +96,36 @@ button:focus-visible {
 }
 
 .brand-row {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 1rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem 1.5rem;
+  align-items: center;
+}
+
+.plate {
+  margin: 0;
+  width: 9.25rem;
+  padding: 0.35rem;
+  background: #fbf7ee;
+  border: 1px solid var(--rule);
+  box-shadow: var(--shadow);
+}
+
+.plate img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 720px) {
+  .brand-row {
+    grid-template-columns: 10.5rem minmax(0, 1fr) auto;
+    gap: 0.5rem 1.75rem;
+  }
+
+  .plate {
+    width: 10.5rem;
+  }
 }
 
 .brand {
@@ -139,6 +164,7 @@ button:focus-visible {
   color: var(--ink);
 }
 
+.site-title em,
 .site-title span {
   font-style: italic;
   font-weight: 500;
@@ -248,11 +274,27 @@ button:focus-visible {
 }
 
 /* Cards */
+.ledger {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-bottom: 3rem;
+}
+
+.month-label {
+  margin: 0 0 0.85rem;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
 .grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.1rem;
-  padding-bottom: 3rem;
 }
 
 @media (min-width: 720px) {
@@ -319,7 +361,7 @@ button:focus-visible {
   letter-spacing: 0.02em;
 }
 
-.card h2 {
+.card h3 {
   margin: 0;
   font-family: var(--serif);
   font-size: 1.18rem;
@@ -328,19 +370,19 @@ button:focus-visible {
   letter-spacing: -0.01em;
 }
 
-.card h2 a {
+.card h3 a {
   color: inherit;
   text-decoration: none;
 }
 
-.card h2 a:hover {
+.card h3 a:hover {
   color: var(--teal);
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.15em;
 }
 
-.card h2 em,
+.card h3 em,
 .excerpt em,
 .species em {
   font-style: italic;
@@ -420,11 +462,50 @@ button:focus-visible {
   max-width: 48rem;
 }
 
+.site-footer .credit,
 .site-footer .colophon {
   font-family: var(--mono);
   font-size: 0.72rem;
   color: var(--ink-faint);
   letter-spacing: 0.04em;
+}
+
+.site-footer .credit em {
+  font-family: var(--serif);
+  font-style: italic;
+  letter-spacing: 0;
+}
+
+.more-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.more {
+  appearance: none;
+  border: 1px solid var(--rule-strong);
+  background: transparent;
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 0.92rem;
+  padding: 0.55rem 1.05rem;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.more:hover {
+  border-color: var(--ink);
+}
+
+.more-note {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--ink-faint);
 }
 
 @media (prefers-reduced-motion: reduce) {

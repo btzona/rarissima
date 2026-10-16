@@ -1,9 +1,9 @@
 {
   "site": "Rarissima",
   "subtitle": "A ledger of obscure, rare, and newly illuminated insect research",
-  "updated": "2026-09-26T18:13:40.484365+00:00",
-  "article_count": 36,
-  "rare_count": 13,
+  "updated": "2026-10-16T02:10:31.680416+00:00",
+  "article_count": 160,
+  "rare_count": 99,
   "feeds": [
     {
       "id": "nature-entomology",
@@ -21,7 +21,7 @@
       "id": "wiley-sysent",
       "name": "Systematic Entomology",
       "ok": true,
-      "items": 11
+      "items": 3
     },
     {
       "id": "sciencedaily-zoology",
@@ -33,7 +33,7 @@
       "id": "sciencedaily-animals",
       "name": "ScienceDaily Animals",
       "ok": true,
-      "items": 2
+      "items": 1
     },
     {
       "id": "sciencedaily-ecology",
@@ -45,7 +45,7 @@
       "id": "phys-plants-animals",
       "name": "Phys.org Plants & Animals",
       "ok": true,
-      "items": 2
+      "items": 1
     },
     {
       "id": "phys-ecology",
@@ -57,192 +57,277 @@
       "id": "frontiers-eco",
       "name": "Frontiers in Ecology and Evolution",
       "ok": true,
-      "items": 0
+      "items": 1
     },
     {
       "id": "pubmed",
       "name": "PubMed",
       "ok": false,
       "error": "PubMed eutils blocked or returned HTML (IP rate limit)"
+    },
+    {
+      "id": "europepmc",
+      "name": "Europe PMC",
+      "ok": true,
+      "items": 98
     }
   ],
   "articles": [
     {
-      "id": "b9fb90506b2284b0",
-      "title": "Yahganona nom. nov., a replacement name for the South American moth genus Ona Sihvonen, Hausmann & Brehm (Lepidoptera: Apoprogonidae)",
-      "link": "https://resjournals.onlinelibrary.wiley.com/doi/10.1111/syen.70070?af=R",
-      "summary": "Systematic Entomology, Volume 51, Issue 3, July‐September 2026.",
-      "source": "Systematic Entomology",
-      "source_id": "wiley-sysent",
-      "date": "2026-09-22T06:29:28+00:00",
-      "score": 90,
-      "rare": true,
+      "id": "8b3d80ab25fff78a",
+      "title": "Two brain circuits coordinate fruit flies' wing and leg movements to threaten rivals",
+      "link": "https://phys.org/news/2026-10-brain-circuits-fruit-flies-wing.html",
+      "summary": "Limbs evolved as a means of locomotion. From the primitive rotating flagella of bacteria to the wings of flies and even our own legs, animals use these appendages to travel to find food or mates or escape predators. But in countless species across the animal kingdom, limbs are repurposed to create elaborate social…",
+      "source": "Phys.org Plants & Animals",
+      "source_id": "phys-plants-animals",
+      "date": "2026-10-15T19:40:18+00:00",
+      "score": 25,
+      "rare": false,
       "species": [
-        "Yahganona nom",
-        "American moth genus"
+        "Two brain circuits",
+        "Limbs evolved"
       ]
     },
     {
-      "id": "280fd53e6ba29cbe",
-      "title": "Phylogenomics of Derbidae (Hemiptera: Fulgoromorpha) and implications for the higher classification and evolutionary history of the family",
-      "link": "https://resjournals.onlinelibrary.wiley.com/doi/10.1111/syen.70068?af=R",
-      "summary": "Systematic Entomology, Volume 51, Issue 3, July‐September 2026.",
+      "id": "e394856ec0cc5dbd",
+      "title": "Supporting Monarch Migration Through Conservation Action",
+      "link": "https://entomologytoday.org/2026/10/15/supporting-monarch-migration-through-conservation-action-syngenta/",
+      "summary": "Syngenta partners with Monarch Joint Venture to support efforts to protect and enhance habitat across North America for pollinators like the monarch butterfly ( Danaus plexippus ). (Photo by Rob Routledge, Sault College, Bugwood.org, CC BY 3.0 US ) \" data-image-caption=\" Syngenta partners with Monarch Joint Venture…",
+      "source": "Entomology Today (ESA)",
+      "source_id": "entomology-today",
+      "date": "2026-10-15T17:15:07+00:00",
+      "score": 50,
+      "rare": false,
+      "species": [
+        "Syngenta partners with",
+        "America for pollinators",
+        "Danaus plexippus"
+      ]
+    },
+    {
+      "id": "87ebe3db2fda4c77",
+      "title": "Sheep grazing in solar fields offers farmers economic, ecological gains",
+      "link": "https://phys.org/news/2026-10-sheep-grazing-solar-fields-farmers.html",
+      "summary": "Two new research papers shed light on the growing practice of grazing sheep in fields with solar arrays. One demonstrates that, in the right numbers, sheep grazing increases populations of beneficial insects like bees and lady beetles compared to mowing around solar panels. The other research describes a…",
+      "source": "Phys.org Ecology",
+      "source_id": "phys-ecology",
+      "date": "2026-10-14T19:40:07+00:00",
+      "score": 25,
+      "rare": false,
+      "species": [
+        "Sheep grazing",
+        "Two new research",
+        "One demonstrates that"
+      ]
+    },
+    {
+      "id": "a3457b9c39fc40ce",
+      "title": "Putting Weeds to Work: A Circular Agriculture Solution for Insect Farming",
+      "link": "https://entomologytoday.org/2026/10/14/putting-weeds-work-circular-agriculture-solution-insect-farming-food-feed/",
+      "summary": "Researchers are exploring how to turn weeds into feed for farmed insects, creating protein for food and livestock feed while producing natural fertilizer. A new review suggests a circular agriculture model could cut waste, boost farm income, and improve sustainability. The house cricket ( Acheta domesticus ) is a…",
+      "source": "Entomology Today (ESA)",
+      "source_id": "entomology-today",
+      "date": "2026-10-14T17:15:46+00:00",
+      "score": 50,
+      "rare": false,
+      "species": [
+        "Solution for",
+        "Researchers are exploring",
+        "Acheta domesticus"
+      ]
+    },
+    {
+      "id": "f08a9435420d9589",
+      "title": "How drought shapes the impact of Xylella fastidiosa on almond trees",
+      "link": "https://phys.org/news/2026-10-drought-impact-xylella-fastidiosa-almond.html",
+      "summary": "Xylella fastidiosa is a pathogen that poses a serious threat to agri-food systems. An insect-borne bacterium that eventually causes trees to dry out and die, it was first detected in Spain in 2016, alarming the farming community. Although it is more commonly associated with olive trees, it also inflicts heavy losses…",
+      "source": "Phys.org Ecology",
+      "source_id": "phys-ecology",
+      "date": "2026-10-14T17:00:08+00:00",
+      "score": 25,
+      "rare": false,
+      "species": [
+        "How drought shapes",
+        "Xylella fastidiosa",
+        "An insect"
+      ]
+    },
+    {
+      "id": "1d0a50aa949fd5f5",
+      "title": "Genetic structure, spectral characteristics and evolutionary history of butterflies in the European Polyommatus eros species group (Lepidoptera, Lycaenidae)",
+      "link": "https://resjournals.onlinelibrary.wiley.com/doi/10.1111/syen.70072?af=R",
+      "summary": "Systematic Entomology, Volume 51, Issue 4, October‐December 2026.",
       "source": "Systematic Entomology",
       "source_id": "wiley-sysent",
-      "date": "2026-09-15T13:32:12+00:00",
+      "date": "2026-10-10T06:53:56+00:00",
       "score": 90,
       "rare": true,
+      "species": [
+        "Genetic structure",
+        "Polyommatus eros species"
+      ]
+    },
+    {
+      "id": "f2e3dbc2efcd1b84",
+      "title": "New Respirometry Method Could Expand Studies of Insect Thermal Biology",
+      "link": "https://entomologytoday.org/2026/10/09/respirometry-method-studies-insect-thermal-biology/",
+      "summary": "A new high-throughput respiration-measuring system lets scientists monitor up to 240 insects and other invertebrates at once, making it far easier to study insects&#8217; resting metabolic rates and how they respond to temperature and climate change. The method is adapted from a commercially available system…",
+      "source": "Entomology Today (ESA)",
+      "source_id": "entomology-today",
+      "date": "2026-10-09T13:00:31+00:00",
+      "score": 50,
+      "rare": false,
       "species": []
     },
     {
-      "id": "fe54435423f7c2e6",
-      "title": "New insights into the tribal‐level phylogeny and historical biogeography of Iassinae (Hemiptera: Cicadellidae) revealed by phylogenomics",
-      "link": "https://resjournals.onlinelibrary.wiley.com/doi/10.1111/syen.70067?af=R",
-      "summary": "Systematic Entomology, Volume 51, Issue 3, July‐September 2026.",
-      "source": "Systematic Entomology",
-      "source_id": "wiley-sysent",
-      "date": "2026-08-31T10:34:25+00:00",
-      "score": 90,
-      "rare": true,
+      "id": "c191ebe606c0132f",
+      "title": "Tractor-Mounted Vacuum Shows Potential as New Tool for Field Crop Pest Removal",
+      "link": "https://entomologytoday.org/2026/10/07/tractor-mounted-vacuum-field-crop-pest-management/",
+      "summary": "A tractor-mounted vacuum successfully removed many crop-damaging insects in field tests, offering farmers a promising, pesticide-free option for pest management. Researchers in Slovenia who developed the system are now refining it to better target pests while avoiding beneficial insects. (Image originally published…",
+      "source": "Entomology Today (ESA)",
+      "source_id": "entomology-today",
+      "date": "2026-10-07T17:30:56+00:00",
+      "score": 50,
+      "rare": false,
       "species": [
-        "New insights into"
+        "Tool for",
+        "Slovenia who developed",
+        "Image originally published"
       ]
     },
     {
-      "id": "bd9f968c6fde9a45",
-      "title": "324-million-year-old fossil reveals how insects conquered land",
-      "link": "https://www.sciencedaily.com/releases/2026/08/260827010455.htm",
-      "summary": "Ancient fossils suggest insects conquered land through a long amphibious phase rather than making an abrupt jump from water to dry ground. A newly identified 324-million-year-old species still carried paddle-like abdominal limbs, revealing an evolutionary bridge between aquatic ancestors and modern six-legged insects.",
-      "source": "ScienceDaily Zoology",
-      "source_id": "sciencedaily-zoology",
-      "date": "2026-08-27T07:22:34+00:00",
-      "score": 65,
-      "rare": true,
+      "id": "13081755628d8abd",
+      "title": "Tropical trees built homes for ants. Wasps are taking them over",
+      "link": "https://www.sciencedaily.com/releases/2026/10/261004001832.htm",
+      "summary": "Predatory wasps are hijacking shelters built by tropical trees for their ant defenders, potentially disrupting an ancient partnership that protects the plants from hungry insects. The takeover is far more common in disturbed landscapes such as oil palm plantations and could have lasting consequences for forest…",
+      "source": "ScienceDaily Animals",
+      "source_id": "sciencedaily-animals",
+      "date": "2026-10-06T03:12:36+00:00",
+      "score": 25,
+      "rare": false,
       "species": [
-        "Ancient fossils suggest"
+        "Tropical trees built",
+        "Wasps are taking",
+        "Predatory wasps are"
       ]
     },
     {
-      "id": "a0d4b7805a42b44a",
-      "title": "Bee pathogen sharing and prevalence are linked with flower sharing and taxonomic distance within the bee community",
-      "link": "https://www.nature.com/articles/s42003-026-10755-2",
+      "id": "781398184ce3a70c",
+      "title": "Characterization of silk-like materials from larval salivary glands of the dipteran, Keroplatus testaceus",
+      "link": "https://www.nature.com/articles/s41467-026-78291-5",
       "summary": "",
       "source": "Nature (Entomology)",
       "source_id": "nature-entomology",
-      "date": "2026-08-08T00:00:00+00:00",
-      "score": 90,
-      "rare": true,
+      "date": "2026-10-05T00:00:00+00:00",
+      "score": 25,
+      "rare": false,
       "species": [
-        "Bee pathogen sharing"
+        "Keroplatus testaceus"
       ]
     },
     {
-      "id": "823b8c3be7cb5f00",
-      "title": "Evolution and biogeography of the widespread dragonfly genus Orthetrum (Odonata: Anisoptera: Libellulidae): Massive dispersal in the tertiary",
-      "link": "https://resjournals.onlinelibrary.wiley.com/doi/10.1111/syen.70066?af=R",
-      "summary": "Systematic Entomology, Volume 51, Issue 3, July‐September 2026.",
-      "source": "Systematic Entomology",
-      "source_id": "wiley-sysent",
-      "date": "2026-07-31T10:43:00+00:00",
-      "score": 90,
-      "rare": true,
+      "id": "371e6c74c238c637",
+      "title": "A Cross-Border Problem: Modeling New World Screwworm’s South American Range",
+      "link": "https://entomologytoday.org/2026/10/02/cross-border-problem-modeling-new-world-screwworm-south-america-range/",
+      "summary": "A new study across South America finds New World screwworm flies ( Cochliomyia hominivorax ) thrive in warm, moist regions and may persist through wildlife reservoirs. Researchers raise concerns about surveillance gaps and the need for coordinated cross-border action to protect animal and human health. (Photo by Paul…",
+      "source": "Entomology Today (ESA)",
+      "source_id": "entomology-today",
+      "date": "2026-10-02T15:45:58+00:00",
+      "score": 50,
+      "rare": false,
       "species": [
-        "Evolution and biogeography",
-        "Massive dispersal"
+        "America finds",
+        "World screwworm flies",
+        "Cochliomyia hominivorax"
       ]
     },
     {
-      "id": "ed6e3848e1e4aa7c",
-      "title": "The evolutionary history of praying mantises (Dictyoptera, Mantodea)",
-      "link": "https://resjournals.onlinelibrary.wiley.com/doi/10.1111/syen.70065?af=R",
-      "summary": "Systematic Entomology, Volume 51, Issue 3, July‐September 2026.",
+      "id": "5e9a701a3ae4acb1",
+      "title": "This giant stick insect fooled scientists for decades",
+      "link": "https://www.sciencedaily.com/releases/2026/09/260930020315.htm",
+      "summary": "Scientists have identified two new species of large Australian stick insects, including one that lays extraordinary “lidded” eggs never before recorded in the group. The discovery also revealed that a familiar stick insect had been misidentified for decades, showing how much biodiversity may still be hiding in plain…",
+      "source": "ScienceDaily Zoology",
+      "source_id": "sciencedaily-zoology",
+      "date": "2026-10-01T13:59:22+00:00",
+      "score": 65,
+      "rare": true,
+      "species": [
+        "Scientists have identified",
+        "Australian stick insects"
+      ]
+    },
+    {
+      "id": "a1462652acf1bec1",
+      "title": "New “plant armor” more than triples strawberry yields",
+      "link": "https://www.sciencedaily.com/releases/2026/09/260930020257.htm",
+      "summary": "A new protective fabric boosted strawberry yields by as much as 3.56 times while blocking insects and still allowing sunlight, rain, and airflow to reach the plants. Originally inspired by research on military clothing, Plant Armor could also help farms reduce pesticide and water use.",
+      "source": "ScienceDaily Zoology",
+      "source_id": "sciencedaily-zoology",
+      "date": "2026-10-01T13:43:15+00:00",
+      "score": 25,
+      "rare": false,
+      "species": [
+        "Originally inspired",
+        "Armor could also"
+      ]
+    },
+    {
+      "id": "ed1a2c93d1496966",
+      "title": "Phylogenomics reveals the evolutionary relationships between nesting and brooding behaviours and morphological structures in vespid wasps",
+      "link": "https://resjournals.onlinelibrary.wiley.com/doi/10.1111/syen.70071?af=R",
+      "summary": "Systematic Entomology, Volume 51, Issue 4, October‐December 2026.",
       "source": "Systematic Entomology",
       "source_id": "wiley-sysent",
-      "date": "2026-07-22T05:24:35+00:00",
+      "date": "2026-10-01T06:12:50+00:00",
       "score": 90,
       "rare": true,
+      "species": [
+        "Phylogenomics reveals the"
+      ]
+    },
+    {
+      "id": "c90ab8ff95aaf3b3",
+      "title": "Reading the Rainbow: Butterfly Color Signals Combine UV, Visible Light",
+      "link": "https://entomologytoday.org/2026/09/30/butterfly-color-signals-combine-ultraviolet-visible-light/",
+      "summary": "A new study explores the patterns of pigmentation and wing scale structure in Delias butterflies that reflect both visible colors and ultraviolet light. Researchers say the classical palette of warning coloration may contain colors that humans have been overlooking all along. Here, two Delias species illustrate such…",
+      "source": "Entomology Today (ESA)",
+      "source_id": "entomology-today",
+      "date": "2026-09-30T17:30:00+00:00",
+      "score": 50,
+      "rare": false,
+      "species": [
+        "Reading the",
+        "Delias butterflies that",
+        "Researchers say the"
+      ]
+    },
+    {
+      "id": "e03153749de0ef92",
+      "title": "The importance of insect biodiversity for vertebrates",
+      "link": "https://www.nature.com/articles/s44358-026-00201-w",
+      "summary": "",
+      "source": "Nature (Entomology)",
+      "source_id": "nature-entomology",
+      "date": "2026-09-30T00:00:00+00:00",
+      "score": 50,
+      "rare": false,
       "species": []
     },
     {
-      "id": "0fe74e43d4ce1021",
-      "title": "Evolution of the false‐leaf katydids (Orthoptera: Tettigoniidae: Phaneropterinae): Molecular phylogeny and divergence times",
-      "link": "https://resjournals.onlinelibrary.wiley.com/doi/10.1111/syen.70064?af=R",
-      "summary": "Systematic Entomology, Volume 51, Issue 3, July‐September 2026.",
-      "source": "Systematic Entomology",
-      "source_id": "wiley-sysent",
-      "date": "2026-07-13T03:35:07+00:00",
-      "score": 90,
-      "rare": true,
+      "id": "51ee9aa48173a44c",
+      "title": "Deep Work in the Wild: Making the Most of Station Life",
+      "link": "https://entomologytoday.org/2026/09/29/deep-work-wild-making-most-research-station-life-students/",
+      "summary": "Graduate housing stands beside research fields and woods at Clemson University&#8217;s Pee Dee Research and Education Center in Florence, South Carolina. (Photo by Nisha Yadav) \" data-image-caption=\" Graduate housing stands beside research fields and woods at Clemson University&#8217;s Pee Dee Research and Education…",
+      "source": "Entomology Today (ESA)",
+      "source_id": "entomology-today",
+      "date": "2026-09-29T17:30:19+00:00",
+      "score": 25,
+      "rare": false,
       "species": [
-        "Molecular phylogeny and"
+        "Making the",
+        "Graduate housing stands",
+        "Research and"
       ]
-    },
-    {
-      "id": "5ae7f0372cf9a979",
-      "title": "Phylogeny‐based generic delimitations of the diverse leafhopper tribe Gyponini, including the establishment of a new tribe of Iassinae (Hemiptera: Cicadellidae)",
-      "link": "https://resjournals.onlinelibrary.wiley.com/doi/10.1111/syen.70062?af=R",
-      "summary": "Systematic Entomology, Volume 51, Issue 3, July‐September 2026.",
-      "source": "Systematic Entomology",
-      "source_id": "wiley-sysent",
-      "date": "2026-07-06T06:01:53+00:00",
-      "score": 90,
-      "rare": true,
-      "species": []
-    },
-    {
-      "id": "5b73ddb5c0108cdb",
-      "title": "Unearthing Mesozoic beetles through micro‐computed tomography: A new family of Archostemata and the first representatives of Ommatidae and †Notocupes from the Crato Formation",
-      "link": "https://resjournals.onlinelibrary.wiley.com/doi/10.1111/syen.70061?af=R",
-      "summary": "Systematic Entomology, Volume 51, Issue 3, July‐September 2026.",
-      "source": "Systematic Entomology",
-      "source_id": "wiley-sysent",
-      "date": "2026-07-03T06:24:32+00:00",
-      "score": 90,
-      "rare": true,
-      "species": [
-        "Mesozoic beetles through",
-        "Archostemata and the",
-        "Ommatidae and"
-      ]
-    },
-    {
-      "id": "d8cc65ae678b6c50",
-      "title": "Little devils of Neotropical forests: A first molecular phylogeny of stygnid harvestmen with UCE‐museomics and a gigamatrix approach (Arachnida, Opiliones, Stygnidae)",
-      "link": "https://resjournals.onlinelibrary.wiley.com/doi/10.1111/syen.70060?af=R",
-      "summary": "Systematic Entomology, Volume 51, Issue 3, July‐September 2026.",
-      "source": "Systematic Entomology",
-      "source_id": "wiley-sysent",
-      "date": "2026-07-02T05:11:38+00:00",
-      "score": 90,
-      "rare": true,
-      "species": [
-        "Little devils",
-        "Neotropical forests"
-      ]
-    },
-    {
-      "id": "826a8892fecbd718",
-      "title": "Issue Information",
-      "link": "https://resjournals.onlinelibrary.wiley.com/doi/10.1111/syen.70053?af=R",
-      "summary": "Systematic Entomology, Volume 51, Issue 3, July‐September 2026.",
-      "source": "Systematic Entomology",
-      "source_id": "wiley-sysent",
-      "date": "2026-07-01T16:52:42+00:00",
-      "score": 90,
-      "rare": true,
-      "species": []
-    },
-    {
-      "id": "25257f726af5c1b0",
-      "title": "Long‐branch attraction and incomplete lineage sorting explain the unstable high‐level position of eriophyoid mites in the arachnid tree of life",
-      "link": "https://resjournals.onlinelibrary.wiley.com/doi/10.1111/syen.70063?af=R",
-      "summary": "Systematic Entomology, Volume 51, Issue 3, July‐September 2026.",
-      "source": "Systematic Entomology",
-      "source_id": "wiley-sysent",
-      "date": "2026-07-01T07:00:00+00:00",
-      "score": 90,
-      "rare": true,
-      "species": []
     },
     {
       "id": "01607fec4dc2cc27",
@@ -318,6 +403,37 @@
       ]
     },
     {
+      "id": "f5a9e05f623aa554",
+      "title": "Three species of Encyrtidae (Hymenoptera, Chalcidoidea) from Mongolia, with descriptions of two new species",
+      "link": "https://doi.org/10.3897/zookeys.1292.187191",
+      "summary": "Two species, Trechnites bulgani Zou & Zhang, sp. nov . and Helegonatopus arkhangaiensis Zou & Zhang, sp. nov . are described as new to science. Psyllaephagus tamaricicola Myartseva is recorded from Mongolia for the first time. A diagnosis or a description, figures of the characters, as well as the known distribution…",
+      "source": "ZooKeys",
+      "source_id": "europepmc",
+      "date": "2026-09-23T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Three species",
+        "Two species",
+        "Trechnites bulgani"
+      ]
+    },
+    {
+      "id": "b9fb90506b2284b0",
+      "title": "Yahganona nom. nov., a replacement name for the South American moth genus Ona Sihvonen, Hausmann & Brehm (Lepidoptera: Apoprogonidae)",
+      "link": "https://resjournals.onlinelibrary.wiley.com/doi/10.1111/syen.70070?af=R",
+      "summary": "Systematic Entomology, Volume 51, Issue 3, July‐September 2026.",
+      "source": "Systematic Entomology",
+      "source_id": "wiley-sysent",
+      "date": "2026-09-22T06:29:28+00:00",
+      "score": 90,
+      "rare": true,
+      "species": [
+        "Yahganona nom",
+        "American moth genus"
+      ]
+    },
+    {
       "id": "3fa71bb246bcbaf3",
       "title": "EpOME functionally antagonises prostaglandin signalling in Spodoptera exigua via a specific GPCR conserved across metazoans",
       "link": "https://www.nature.com/articles/s41467-026-77858-6",
@@ -361,6 +477,20 @@
       ]
     },
     {
+      "id": "a0b103e7d475a616",
+      "title": "A Taxonomic Study of the proclia Group and Allied Species of Aphytis (Hymenoptera: Aphelinidae) from China, with Descriptions of Two New Species",
+      "link": "https://doi.org/10.3390/insects17090966",
+      "summary": "The genus Aphytis (Hymenoptera: Aphelinidae) comprises ectoparasitoids of scale insects and includes many species of biological control importance. The proclia group is a major lineage within this genus, with seven species recorded in China, along with two morphologically closely related species. Based on specimens…",
+      "source": "Insects",
+      "source_id": "europepmc",
+      "date": "2026-09-19T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Group and"
+      ]
+    },
+    {
       "id": "c7f8c66e83bee384",
       "title": "Arthropods Lag Far Behind Other Animals in Conservation Assessment and Protection, Study Shows",
       "link": "https://entomologytoday.org/2026/09/18/arthropods-lag-behind-other-animals-in-conservation-assessment-protection/",
@@ -376,6 +506,22 @@
       ]
     },
     {
+      "id": "013f7f3eea411e9c",
+      "title": "Species groups and identification key to Chinese Temnothorax ants (Hymenoptera, Formicidae) with descriptions of four new species from Shennongjia National Park",
+      "link": "https://doi.org/10.3897/zookeys.1292.180703",
+      "summary": "The myrmicine ant genus Temnothorax Mayr, 1861 is highly diverse in China; however, its fauna remained inadequately studied until recently. During the 2023 Background Resources Survey Project in Shennongjia National Park, four new species of this genus were discovered and are herein described as Temnothorax shennongi…",
+      "source": "ZooKeys",
+      "source_id": "europepmc",
+      "date": "2026-09-18T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Species groups and",
+        "Temnothorax ants",
+        "Temnothorax shennongi"
+      ]
+    },
+    {
       "id": "5413e082d242c27d",
       "title": "Retraction Note: Reactive oxygen species-producing genes regulate mosquito midgut bacteria colonization, transcriptomic changes and cell repair",
       "link": "https://www.nature.com/articles/s42003-026-10611-3",
@@ -388,6 +534,33 @@
       "species": [
         "Reactive oxygen species"
       ]
+    },
+    {
+      "id": "4bdca60fafcb3b69",
+      "title": "A review of Panelus occurring in the Korean Peninsula (Coleoptera, Scarabaeidae, Scarabaeinae) with descriptions of two new species",
+      "link": "https://doi.org/10.3897/zookeys.1292.200337",
+      "summary": "A taxonomic review of Korean Panelus Lewis is presented based on morphological and molecular characters ( COI ). Detailed comparison of morphological characters and molecular analyses using genetic divergence and gene-tree monophyly for species delimitation support the description of two new species, Panelus…",
+      "source": "ZooKeys",
+      "source_id": "europepmc",
+      "date": "2026-09-16T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Panelus occurring",
+        "Detailed comparison"
+      ]
+    },
+    {
+      "id": "280fd53e6ba29cbe",
+      "title": "Phylogenomics of Derbidae (Hemiptera: Fulgoromorpha) and implications for the higher classification and evolutionary history of the family",
+      "link": "https://resjournals.onlinelibrary.wiley.com/doi/10.1111/syen.70068?af=R",
+      "summary": "Systematic Entomology, Volume 51, Issue 3, July‐September 2026.",
+      "source": "Systematic Entomology",
+      "source_id": "wiley-sysent",
+      "date": "2026-09-15T13:32:12+00:00",
+      "score": 90,
+      "rare": true,
+      "species": []
     },
     {
       "id": "3ada1eaccc39e10d",
@@ -506,6 +679,21 @@
       "species": []
     },
     {
+      "id": "3d3c337d540017e5",
+      "title": "Integrative Taxonomic Study of Chinese Anastatus (Hymenoptera: Eupelmidae) Based on Morphology and COI Barcoding, with Description of Eleven New Species",
+      "link": "https://doi.org/10.3390/insects17090918",
+      "summary": "Thirty-two Chinese Anastatus species (Hymenoptera: Chalcidoidea: Eupelmidae) are studied, comprising 20 previously described species and 11 new species. Ten of the new species belong to the subgenus A . ( Anastatus ): A . ( Anastatus ) nozdormu sp. nov. , A. ( Anastatus ) kryptos sp. nov. , A. ( Anastatus )…",
+      "source": "Insects",
+      "source_id": "europepmc",
+      "date": "2026-09-01T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Morphology and",
+        "Anastatus species"
+      ]
+    },
+    {
       "id": "37d5b0f965e77ca8",
       "title": "Varroa mites escape the evolutionary trap of haplodiploidy",
       "link": "https://www.nature.com/articles/s41467-026-77125-8",
@@ -517,6 +705,36 @@
       "rare": false,
       "species": [
         "Varroa mites escape"
+      ]
+    },
+    {
+      "id": "fe54435423f7c2e6",
+      "title": "New insights into the tribal‐level phylogeny and historical biogeography of Iassinae (Hemiptera: Cicadellidae) revealed by phylogenomics",
+      "link": "https://resjournals.onlinelibrary.wiley.com/doi/10.1111/syen.70067?af=R",
+      "summary": "Systematic Entomology, Volume 51, Issue 3, July‐September 2026.",
+      "source": "Systematic Entomology",
+      "source_id": "wiley-sysent",
+      "date": "2026-08-31T10:34:25+00:00",
+      "score": 90,
+      "rare": true,
+      "species": [
+        "New insights into"
+      ]
+    },
+    {
+      "id": "e39dbd57e7509317",
+      "title": "Integrative Taxonomy Supports Four New Species in the Amphinemura sinensis Species Group (Plecoptera: Nemouridae) from China",
+      "link": "https://doi.org/10.3390/insects17090909",
+      "summary": "The Amphinemura sinensis species group is distributed in China and Vietnam and is characterized by the horn-shaped lateral processes of the dorsal sclerite and the pointed ventral sclerite of the male epiproct. Species in the group are often difficult to distinguish because of their similar morphology and the limited…",
+      "source": "Insects",
+      "source_id": "europepmc",
+      "date": "2026-08-30T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Amphinemura sinensis",
+        "Amphinemura sinensis species",
+        "China and"
       ]
     },
     {
@@ -550,6 +768,36 @@
       ]
     },
     {
+      "id": "bd9f968c6fde9a45",
+      "title": "324-million-year-old fossil reveals how insects conquered land",
+      "link": "https://www.sciencedaily.com/releases/2026/08/260827010455.htm",
+      "summary": "Ancient fossils suggest insects conquered land through a long amphibious phase rather than making an abrupt jump from water to dry ground. A newly identified 324-million-year-old species still carried paddle-like abdominal limbs, revealing an evolutionary bridge between aquatic ancestors and modern six-legged insects.",
+      "source": "ScienceDaily Zoology",
+      "source_id": "sciencedaily-zoology",
+      "date": "2026-08-27T07:22:34+00:00",
+      "score": 65,
+      "rare": true,
+      "species": [
+        "Ancient fossils suggest"
+      ]
+    },
+    {
+      "id": "c2800574a2712b44",
+      "title": "Notes on the subfamily Pleganophorinae, with the description of a new species of the genus Trochoideus Westwood, 1833 (Coleoptera, Endomychidae) from China",
+      "link": "https://doi.org/10.3897/zookeys.1290.183211",
+      "summary": "The subfamily Pleganophorinae (Coleoptera, Endomychidae), an unusual group distinguished by its distinctive antennal morphology, is reported for the first time in mainland China with the description of Trochoideus sinensis sp. nov . from Guangdong and Jiangxi and the first records of T. desjardinsi Guérin-Méneville…",
+      "source": "ZooKeys",
+      "source_id": "europepmc",
+      "date": "2026-08-26T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "China with the",
+        "Trochoideus sinensis",
+        "Guangdong and"
+      ]
+    },
+    {
       "id": "4fc482e4d3a6ecb9",
       "title": "Amphibious stem-insect sheds light on colonization of land",
       "link": "https://www.nature.com/articles/s41586-026-10961-2",
@@ -575,6 +823,1631 @@
       "rare": false,
       "species": [
         "Plasmodium infection"
+      ]
+    },
+    {
+      "id": "301dcc711c920b0a",
+      "title": "A New Species of Eucnemidae (Coleoptera: Elateroidea) with Its Complete Mitogenome and Mitogenome-Based Phylogenetic Analysis",
+      "link": "https://doi.org/10.3390/biology15171453",
+      "summary": "We describe Microrhagus ziwulingensis Muona & Meng, sp. nov., from China. The genus Microrhagus Dejean, 1833, was previously represented in China by only two species. We sequenced and assembled the complete mitogenome of M. ziwulingensis (GenBank accession OK143440), which encoded 13 protein-coding genes (PCGs), 2…",
+      "source": "Biology",
+      "source_id": "europepmc",
+      "date": "2026-08-25T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Mitogenome and",
+        "We describe",
+        "Microrhagus ziwulingensis"
+      ]
+    },
+    {
+      "id": "5f33a70075b85b51",
+      "title": "Review of the Chinese species of the genus Reptalus Emeljanov, 1971 (Hemiptera, Fulgoromorpha, Cixiidae), with description of a new species",
+      "link": "https://doi.org/10.3897/zookeys.1290.186750",
+      "summary": "The Chinese species of the genus Reptalus Emeljanov, 1971 (Hemiptera, Fulgoromorpha, Cixiidae) are reviewed. A new species, R. inaequalis Lv, Li & Chen, sp. nov ., from Fujian Province, China, is described and illustrated. This new species belongs to the subgenus Pererepa . The female genitalia of two species within…",
+      "source": "ZooKeys",
+      "source_id": "europepmc",
+      "date": "2026-08-25T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Chinese species"
+      ]
+    },
+    {
+      "id": "2ccc4a356fcd151e",
+      "title": "New Genus, a New Species, and New Combinations in Edessinae (Hemiptera: Pentatomidae)",
+      "link": "https://doi.org/10.1007/s13744-026-01425-3",
+      "summary": "A new genus of Edessinae is described, Notochlora gen. nov. Cunha, Robert and Fernandes. The new genus comprises three species, including two species transferred from Edessa and one new species: Notochlora dolichocera (Lichtenstein 1795) comb. nov., N. guyanensis (Fernandes and van Doesburg 2000) comb. nov., and…",
+      "source": "Neotropical entomology",
+      "source_id": "europepmc",
+      "date": "2026-08-24T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Notochlora gen",
+        "Robert and",
+        "Edessa and one"
+      ]
+    },
+    {
+      "id": "8212a28d121b895e",
+      "title": "The Cambrian crown-group pancrustacean Sunella chimera sp. nov. with raptorial anteriormost appendages",
+      "link": "https://www.nature.com/articles/s42003-026-10772-1",
+      "summary": "",
+      "source": "Nature (Entomology)",
+      "source_id": "nature-entomology",
+      "date": "2026-08-24T00:00:00+00:00",
+      "score": 25,
+      "rare": false,
+      "species": [
+        "Cambrian crown",
+        "Sunella chimera"
+      ]
+    },
+    {
+      "id": "3e8fb24f9d4d490c",
+      "title": "Global DNA Barcoding of Sigara (Hemiptera: Corixidae) Reveals Cryptic Species Formation and Climatic-Niche Divergence",
+      "link": "https://doi.org/10.3390/insects17080876",
+      "summary": "The genus Sigara Fabricius, 1775 (Hemiptera: Corixidae) is an important freshwater bioindicator, but its conservative morphology complicates traditional species identification. This study combines DNA barcoding, traditional taxonomy, and climatic factors within an integrative framework to provide new insights into…",
+      "source": "Insects",
+      "source_id": "europepmc",
+      "date": "2026-08-21T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Formation and"
+      ]
+    },
+    {
+      "id": "069fb7e825193921",
+      "title": "A new species and two newly recorded species of the genus Metopomyza Enderlein from northern China (Diptera, Agromyzidae) with a worldwide key and checklist",
+      "link": "https://doi.org/10.3897/zookeys.1290.199747",
+      "summary": "A new species, Metopomyza hebeiensis sp. nov ., together with two newly recorded species for China (i.e., M. laeta and M. scutellata ), are documented and illustrated in this study; a worldwide identification key and checklist of species included in the genus are also provided. The Maximum-Likelihood and…",
+      "source": "ZooKeys",
+      "source_id": "europepmc",
+      "date": "2026-08-18T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Enderlein from northern",
+        "Metopomyza hebeiensis",
+        "Likelihood and"
+      ]
+    },
+    {
+      "id": "5fafdeb082dcacd1",
+      "title": "A 60-year-old theory about ants, bees and wasps may be wrong",
+      "link": "https://www.sciencedaily.com/releases/2026/08/260813045552.htm",
+      "summary": "Scientists have long thought an unusual genetic system helped ants, bees, and wasps evolve their extraordinary social colonies. A massive new analysis suggests that genetics alone can’t explain it—and the real secret may lie in other traits unique to these insects.",
+      "source": "ScienceDaily Zoology",
+      "source_id": "sciencedaily-zoology",
+      "date": "2026-08-15T13:25:46+00:00",
+      "score": 25,
+      "rare": false,
+      "species": [
+        "Scientists have long"
+      ]
+    },
+    {
+      "id": "7d74336e075a60c0",
+      "title": "Establishment of the Stenothemus volaticus group (Coleoptera, Cantharidae), with description of two new species from Xizang, China",
+      "link": "https://doi.org/10.3897/zookeys.1289.192623",
+      "summary": "The Stenothemus volaticus species group is proposed, comprising a total of 13 species from the Himalayas and southwestern China. Within this group, two new species are described under the names of S. dromoensis sp. nov ., and S. liangi sp. nov . Meanwhile, the female internal reproductive organs of S. schneideri…",
+      "source": "ZooKeys",
+      "source_id": "europepmc",
+      "date": "2026-08-14T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Stenothemus volaticus group",
+        "Stenothemus volaticus species",
+        "Himalayas and southwestern"
+      ]
+    },
+    {
+      "id": "66136d55292c0461",
+      "title": "Three bamboo-feeding new species of the genus Vekunta Distant (Hemiptera, Fulgoromorpha, Derbidae) from Guizhou Province, China",
+      "link": "https://doi.org/10.3897/zookeys.1289.186813",
+      "summary": "Three bamboo-feeding new species of the genus Vekunta Distant, 1906, V. deflecta Yao, Sui & Chen, sp. nov ., V. fodingshanensis Yao, Sui & Chen, sp. nov . and V. furcata Yao, Sui & Chen, sp. nov ., are described and illustrated from Guizhou Province, China. Vekunta fuscolineata , previously known from Korea, is…",
+      "source": "ZooKeys",
+      "source_id": "europepmc",
+      "date": "2026-08-14T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Three bamboo",
+        "Vekunta fuscolineata"
+      ]
+    },
+    {
+      "id": "dabb0e529218fe86",
+      "title": "A single-tube multiplex qPCR assay for identification of Bemisia tabaci (Hemiptera: Aleyrodidae) cryptic species Mediterranean and Asia II-1",
+      "link": "https://doi.org/10.1093/jee/toag250",
+      "summary": "The Bemisia tabaci (Gennadius) species complex comprises numerous cryptic species that differ significantly in invasiveness, host range, virus transmission, and insecticide resistance. Accurate and rapid identification of high-risk cryptic species is therefore essential for biosecurity surveillance and diagnostic…",
+      "source": "Journal of economic entomology",
+      "source_id": "europepmc",
+      "date": "2026-08-13T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Bemisia tabaci",
+        "Mediterranean and",
+        "Accurate and rapid"
+      ]
+    },
+    {
+      "id": "594a5f01e7b85f6e",
+      "title": "Review of the Genus Sinacroneuria (Plecoptera: Perlidae) from China, with Descriptions of Five New Species",
+      "link": "https://doi.org/10.3390/insects17080826",
+      "summary": "The stonefly genus Sinacroneuria Yang and Yang, 1995 (Plecoptera: Perlidae) is restricted to East Asia and represents an important component of freshwater biodiversity. However, the taxonomy of Chinese Sinacroneuria has not been comprehensively revised, resulting in difficulties in species identification. In this…",
+      "source": "Insects",
+      "source_id": "europepmc",
+      "date": "2026-08-10T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Yang and",
+        "Asia and represents",
+        "Sinacroneuria has not"
+      ]
+    },
+    {
+      "id": "a0d4b7805a42b44a",
+      "title": "Bee pathogen sharing and prevalence are linked with flower sharing and taxonomic distance within the bee community",
+      "link": "https://www.nature.com/articles/s42003-026-10755-2",
+      "summary": "",
+      "source": "Nature (Entomology)",
+      "source_id": "nature-entomology",
+      "date": "2026-08-08T00:00:00+00:00",
+      "score": 90,
+      "rare": true,
+      "species": [
+        "Bee pathogen sharing"
+      ]
+    },
+    {
+      "id": "d95046e333b76574",
+      "title": "World’s most-used weedkiller disrupts honeybee brains",
+      "link": "https://www.sciencedaily.com/releases/2026/08/260804034638.htm",
+      "summary": "Glyphosate was long thought to be safe for honeybees because they lack the enzyme the chemical targets in weeds. However, researchers found that exposed bees foraged 13 percent less after only three days and showed changes in brain chemicals linked to behavior. Across a whole hive, that decline could reduce honey…",
+      "source": "ScienceDaily Zoology",
+      "source_id": "sciencedaily-zoology",
+      "date": "2026-08-06T11:42:42+00:00",
+      "score": 25,
+      "rare": false,
+      "species": [
+        "Glyphosate was long"
+      ]
+    },
+    {
+      "id": "bdb27c1aaf9d3a2c",
+      "title": "Forget the sperm race: Fertilization may depend on teamwork",
+      "link": "https://www.sciencedaily.com/releases/2026/08/260805082455.htm",
+      "summary": "Millions of sperm do not always compete alone—some species send them into action as coordinated teams. A sweeping evolutionary study found that this cooperation is widespread among arthropods and has repeatedly emerged and vanished over hundreds of millions of years. The discovery challenges the classic “fastest…",
+      "source": "ScienceDaily Zoology",
+      "source_id": "sciencedaily-zoology",
+      "date": "2026-08-06T06:25:07+00:00",
+      "score": 25,
+      "rare": false,
+      "species": [
+        "Forget the sperm",
+        "Fertilization may depend"
+      ]
+    },
+    {
+      "id": "284fb9b0963f5475",
+      "title": "Rotundedessa gen. n., a New Edessinae Genus with the Description of Two New Species from Argentina (Hemiptera: Pentatomidae)",
+      "link": "https://doi.org/10.1007/s13744-026-01417-3",
+      "summary": "The Edessinae is a Neotropical subfamily of Pentatomidae comprising hundreds of species in 20 genera. The nominal genus Edessa Fabricius, 1803 includes most of this diversity with approximately 350 nominal species, and can be considered a \"depot taxon.\" Studying small groups of morphologically similar species is an…",
+      "source": "Neotropical entomology",
+      "source_id": "europepmc",
+      "date": "2026-08-04T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Rotundedessa gen",
+        "Genus with the",
+        "Species from"
+      ]
+    },
+    {
+      "id": "e3d786168a52328c",
+      "title": "Ant brains reveal how evolution turned hunger into parenting",
+      "link": "https://www.sciencedaily.com/releases/2026/07/260729051519.htm",
+      "summary": "Ant parenting may have evolved from the same brain systems that once controlled hunger. Researchers found that two chemical signals push clonal raider ants toward either caring for larvae or leaving to forage, with the balance changing as the ants grow older. Similar signals are involved in mammalian caregiving…",
+      "source": "ScienceDaily Zoology",
+      "source_id": "sciencedaily-zoology",
+      "date": "2026-08-01T13:01:54+00:00",
+      "score": 25,
+      "rare": false,
+      "species": [
+        "Ant brains reveal",
+        "Ant parenting may",
+        "Researchers found that"
+      ]
+    },
+    {
+      "id": "823b8c3be7cb5f00",
+      "title": "Evolution and biogeography of the widespread dragonfly genus Orthetrum (Odonata: Anisoptera: Libellulidae): Massive dispersal in the tertiary",
+      "link": "https://resjournals.onlinelibrary.wiley.com/doi/10.1111/syen.70066?af=R",
+      "summary": "Systematic Entomology, Volume 51, Issue 3, July‐September 2026.",
+      "source": "Systematic Entomology",
+      "source_id": "wiley-sysent",
+      "date": "2026-07-31T10:43:00+00:00",
+      "score": 90,
+      "rare": true,
+      "species": [
+        "Evolution and biogeography",
+        "Massive dispersal"
+      ]
+    },
+    {
+      "id": "86b1573c87a2fdcf",
+      "title": "Caenocentron Schmid, 1982 (Trichoptera: Xiphocentronidae), a New Species from Mexico, Genetic Diversity, and an Updated Identification Key",
+      "link": "https://doi.org/10.1007/s13744-026-01409-3",
+      "summary": "Caenocentron Schmid, 1982 is a small net-tube caddisfly genus distributed in the southern Nearctic and Neotropical regions. Two species were previously recorded in Mexico: Caenocentron trilineatum (Mosely 1934) and Caenocentron ideolus Schmid, 1982. In this study, Caenocentron chinantecum Razo-González and Vilarino…",
+      "source": "Neotropical entomology",
+      "source_id": "europepmc",
+      "date": "2026-07-28T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Species from",
+        "Nearctic and",
+        "Neotropical regions"
+      ]
+    },
+    {
+      "id": "8922a3d55a467d64",
+      "title": "A natural solution from caterpillar cuticles for flexible impact-resistant materials",
+      "link": "https://www.nature.com/articles/s41467-026-75849-1",
+      "summary": "",
+      "source": "Nature (Entomology)",
+      "source_id": "nature-entomology",
+      "date": "2026-07-24T00:00:00+00:00",
+      "score": 25,
+      "rare": false,
+      "species": []
+    },
+    {
+      "id": "ed6e3848e1e4aa7c",
+      "title": "The evolutionary history of praying mantises (Dictyoptera, Mantodea)",
+      "link": "https://resjournals.onlinelibrary.wiley.com/doi/10.1111/syen.70065?af=R",
+      "summary": "Systematic Entomology, Volume 51, Issue 3, July‐September 2026.",
+      "source": "Systematic Entomology",
+      "source_id": "wiley-sysent",
+      "date": "2026-07-22T05:24:35+00:00",
+      "score": 90,
+      "rare": true,
+      "species": []
+    },
+    {
+      "id": "1e5c8b129d6d651f",
+      "title": "On the Generic Status of Asitrichiosoma Malaise, 1939 (Hymenoptera, Cimbicidae, Cimbicinae) and Its Revision, with Description of Seven New Species",
+      "link": "https://doi.org/10.3390/insects17070745",
+      "summary": "Due to the conspicuous variation in the present morphology, particularly in the male sex (typically the legs and penis valve), the Asitrichiosoma subgenus was established by Malaise, 1939 of the Trichiosoma genus. Based on COI data, the genetic distance between Asitrichiosoma and Trichiosoma is 0.0878, and this…",
+      "source": "Insects",
+      "source_id": "europepmc",
+      "date": "2026-07-21T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "On the",
+        "Asitrichiosoma subgenus was",
+        "Trichiosoma genus"
+      ]
+    },
+    {
+      "id": "4d57f5057c02d443",
+      "title": "First records of two species of the cicada genus Dundubia as serious pests of sugarcane in Indonesia",
+      "link": "https://www.nature.com/articles/s41598-026-59628-y",
+      "summary": "",
+      "source": "Nature (Entomology)",
+      "source_id": "nature-entomology",
+      "date": "2026-07-21T00:00:00+00:00",
+      "score": 50,
+      "rare": false,
+      "species": [
+        "First records"
+      ]
+    },
+    {
+      "id": "8c1e9775d9c3ecd9",
+      "title": "Chromosome-level genome assembly of Corizus hyoscyami (Linnaeus, 1758) (Heteroptera: Rhopalidae)",
+      "link": "https://www.nature.com/articles/s41597-026-07928-3",
+      "summary": "",
+      "source": "Nature (Entomology)",
+      "source_id": "nature-entomology",
+      "date": "2026-07-17T00:00:00+00:00",
+      "score": 25,
+      "rare": false,
+      "species": [
+        "Corizus hyoscyami"
+      ]
+    },
+    {
+      "id": "1efa959c2761cf6f",
+      "title": "A New Species and Molecular Characterization of the Genus Phraepsyche Malicky and Chantaramongkol, 2000, from China (Trichoptera, Odontoceridae)",
+      "link": "https://doi.org/10.3390/ani16142209",
+      "summary": "The genus Phraepsyche Malicky and Chantaramongkol, 2000, is endemic to the Oriental region, currently comprising five species. However, its species diversity remains incompletely explored, and genetic data for this genus are completely lacking. Here, we describe a new species of Phraepsyche from southwestern China…",
+      "source": "Animals : an open access journal from MDPI",
+      "source_id": "europepmc",
+      "date": "2026-07-16T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Species and",
+        "Malicky and",
+        "Oriental region"
+      ]
+    },
+    {
+      "id": "2d7445709b14d278",
+      "title": "Access to shared food resources is key to the division of labour in honey bees",
+      "link": "https://www.nature.com/articles/s42003-026-10680-4",
+      "summary": "",
+      "source": "Nature (Entomology)",
+      "source_id": "nature-entomology",
+      "date": "2026-07-16T00:00:00+00:00",
+      "score": 50,
+      "rare": false,
+      "species": []
+    },
+    {
+      "id": "76fffd3570f9a6bb",
+      "title": "Mating-dependent gut enlargement and immune suppression in field-caught Aedes aegypti",
+      "link": "https://www.nature.com/articles/s42003-026-10654-6",
+      "summary": "",
+      "source": "Nature (Entomology)",
+      "source_id": "nature-entomology",
+      "date": "2026-07-14T00:00:00+00:00",
+      "score": 25,
+      "rare": false,
+      "species": [
+        "Aedes aegypti"
+      ]
+    },
+    {
+      "id": "0fe74e43d4ce1021",
+      "title": "Evolution of the false‐leaf katydids (Orthoptera: Tettigoniidae: Phaneropterinae): Molecular phylogeny and divergence times",
+      "link": "https://resjournals.onlinelibrary.wiley.com/doi/10.1111/syen.70064?af=R",
+      "summary": "Systematic Entomology, Volume 51, Issue 3, July‐September 2026.",
+      "source": "Systematic Entomology",
+      "source_id": "wiley-sysent",
+      "date": "2026-07-13T03:35:07+00:00",
+      "score": 90,
+      "rare": true,
+      "species": [
+        "Molecular phylogeny and"
+      ]
+    },
+    {
+      "id": "022feed8b11de7ec",
+      "title": "Scientists warn invasive Asian mantises are threatening Europe's wildlife",
+      "link": "https://www.sciencedaily.com/releases/2026/07/260710003540.htm",
+      "summary": "Two striking Asian praying mantis species that have rapidly spread across Europe have now been officially classified as invasive, raising new concerns about their impact on native wildlife. Boosted by climate change and urban environments, these fast-breeding predators are expanding northward, where they prey on…",
+      "source": "ScienceDaily Ecology",
+      "source_id": "sciencedaily-ecology",
+      "date": "2026-07-11T12:53:55+00:00",
+      "score": 25,
+      "rare": false,
+      "species": [
+        "Scientists warn invasive",
+        "Asian mantises are",
+        "Two striking"
+      ]
+    },
+    {
+      "id": "f242cd75986f4728",
+      "title": "Observations on some bio-ecological attributes of cryptic one-piece wood-feeding termites (Blattodea, Isoptera) in Himachal Pradesh (India)",
+      "link": "https://doi.org/10.1038/s41598-026-61666-5",
+      "summary": "Termites are eusocial insects that live in large or small colonies. The one-piece wood-feeding termites in Himachal Pradesh are represented by three species, i.e., Archotermopsis wroughtoni, Neotermes bosei and Stylotermes faveolus. In Himachal Pradesh, the distribution of A. wroughtoni was observed from 31.13 to…",
+      "source": "Scientific reports",
+      "source_id": "europepmc",
+      "date": "2026-07-11T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Termites are eusocial",
+        "Pradesh are represented",
+        "Archotermopsis wroughtoni"
+      ]
+    },
+    {
+      "id": "204972681564ccd2",
+      "title": "Trophic-level dependent concentrations of forever chemicals in insects of pristine areas are linked to morphological changes",
+      "link": "https://www.nature.com/articles/s42003-026-10586-1",
+      "summary": "",
+      "source": "Nature (Entomology)",
+      "source_id": "nature-entomology",
+      "date": "2026-07-09T00:00:00+00:00",
+      "score": 50,
+      "rare": false,
+      "species": []
+    },
+    {
+      "id": "5ae7f0372cf9a979",
+      "title": "Phylogeny‐based generic delimitations of the diverse leafhopper tribe Gyponini, including the establishment of a new tribe of Iassinae (Hemiptera: Cicadellidae)",
+      "link": "https://resjournals.onlinelibrary.wiley.com/doi/10.1111/syen.70062?af=R",
+      "summary": "Systematic Entomology, Volume 51, Issue 3, July‐September 2026.",
+      "source": "Systematic Entomology",
+      "source_id": "wiley-sysent",
+      "date": "2026-07-06T06:01:53+00:00",
+      "score": 90,
+      "rare": true,
+      "species": []
+    },
+    {
+      "id": "b83e4d7355802686",
+      "title": "The ground beetle genus Dinopelma Bates from Mindanao, with description of a new species, and a new synonymy (Coleoptera: Carabidae: Ctenodactylinae: Hexagoniini) ",
+      "link": "https://doi.org/10.11646/zootaxa.5845.2.11",
+      "summary": "Dinopelma Bates, 1889 species from Mindanao Island, Philippines, are reviewed. Examination of material representing the two species previously described from Mindanao showed that they represent immature and mature forms of the same species. Therefore, the following synonymy is established: Dinopelma lineola Andrewes…",
+      "source": "Zootaxa",
+      "source_id": "europepmc",
+      "date": "2026-07-06T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Bates from",
+        "Mindanao showed that",
+        "Dinopelma lineola"
+      ]
+    },
+    {
+      "id": "e30bca6b538d7a6d",
+      "title": "Phenotypic and neuropeptidergic control of appetitive behavior in honey bees (Apis mellifera)",
+      "link": "https://www.nature.com/articles/s42003-026-10484-6",
+      "summary": "",
+      "source": "Nature (Entomology)",
+      "source_id": "nature-entomology",
+      "date": "2026-07-04T00:00:00+00:00",
+      "score": 50,
+      "rare": false,
+      "species": [
+        "Phenotypic and neuropeptidergic",
+        "Apis mellifera"
+      ]
+    },
+    {
+      "id": "5b73ddb5c0108cdb",
+      "title": "Unearthing Mesozoic beetles through micro‐computed tomography: A new family of Archostemata and the first representatives of Ommatidae and †Notocupes from the Crato Formation",
+      "link": "https://resjournals.onlinelibrary.wiley.com/doi/10.1111/syen.70061?af=R",
+      "summary": "Systematic Entomology, Volume 51, Issue 3, July‐September 2026.",
+      "source": "Systematic Entomology",
+      "source_id": "wiley-sysent",
+      "date": "2026-07-03T06:24:32+00:00",
+      "score": 90,
+      "rare": true,
+      "species": [
+        "Mesozoic beetles through",
+        "Archostemata and the",
+        "Ommatidae and"
+      ]
+    },
+    {
+      "id": "892a341d0de2be02",
+      "title": "A new species of the genus Lucanus Scopoli, 1763 (Coleoptera: Lucanidae: Lucaninae) from southwestern China ",
+      "link": "https://doi.org/10.11646/zootaxa.5845.1.11",
+      "summary": "A new stag beetle species, Lucanus langya Li, Huang, Wang & Zhan, sp. nov. , is described from Yunnan, China. Morphological differences between this new species and its closely related congeners L. prossi Zilioli, 2000 and L. dirki Schenk, 2002 are presented. Comprehensive illustrations are also provided for all…",
+      "source": "Zootaxa",
+      "source_id": "europepmc",
+      "date": "2026-07-03T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Lucanus langya",
+        "Morphological differences between",
+        "Comprehensive illustrations are"
+      ]
+    },
+    {
+      "id": "927c3f7245d1ddd3",
+      "title": "One new species of the genus Neophlugiolopsis Pan & Bian, 2024 (Orthoptera: Tettigoniidae: Meconematinae) from Guangxi, China ",
+      "link": "https://doi.org/10.11646/zootaxa.5845.1.12",
+      "summary": "Europe PMC",
+      "source": "Zootaxa",
+      "source_id": "europepmc",
+      "date": "2026-07-03T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "One new species"
+      ]
+    },
+    {
+      "id": "06e9d6cff1a959ed",
+      "title": "Revalidation of Trox raduloides Kolbe, 1904 as a distinct species from Omorgus ( Afromorgus ) tuberosus (Klug, 1855) (Coleoptera: Trogidae), and description of two new species ",
+      "link": "https://doi.org/10.11646/zootaxa.5845.1.5",
+      "summary": "Omorgus ( Afromorgus ) tuberosus (Klug, 1855) has long been regarded as a widespread species in the Afrotropical Region, with Trox raduloides Kolbe, 1904 treated as its junior synonym. However, discrepancies observed in the morphology of type specimens, most notably in the structure of the male genitalia, suggest…",
+      "source": "Zootaxa",
+      "source_id": "europepmc",
+      "date": "2026-07-03T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Trox raduloides"
+      ]
+    },
+    {
+      "id": "ee078f016e5e1bb8",
+      "title": "Allostrophus tui sp. nov.: A new fossil species of polypore fungus beetle from the mid-Cretaceous Kachin amber (Coleoptera, Tetratomidae, Eustrophinae) ",
+      "link": "https://doi.org/10.11646/zootaxa.5845.1.9",
+      "summary": "Tetratomidae is a small family of fungivorous beetles, comprising approximately 150 extant species in 13 genera and five subfamilies worldwide. Its fossil record is limited, with only seven named species from the Mesozoic and five from the Cenozoic. In the present study, the third species of the extinct eustrophine…",
+      "source": "Zootaxa",
+      "source_id": "europepmc",
+      "date": "2026-07-03T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Allostrophus tui",
+        "Kachin amber",
+        "Its fossil record"
+      ]
+    },
+    {
+      "id": "d8cc65ae678b6c50",
+      "title": "Little devils of Neotropical forests: A first molecular phylogeny of stygnid harvestmen with UCE‐museomics and a gigamatrix approach (Arachnida, Opiliones, Stygnidae)",
+      "link": "https://resjournals.onlinelibrary.wiley.com/doi/10.1111/syen.70060?af=R",
+      "summary": "Systematic Entomology, Volume 51, Issue 3, July‐September 2026.",
+      "source": "Systematic Entomology",
+      "source_id": "wiley-sysent",
+      "date": "2026-07-02T05:11:38+00:00",
+      "score": 90,
+      "rare": true,
+      "species": [
+        "Little devils",
+        "Neotropical forests"
+      ]
+    },
+    {
+      "id": "9a16485bad2c13e1",
+      "title": "Integrative Taxonomy Reshapes Palaearctic-Oriental Biogeography: First Discovery of Dicranomyia ( Sivalimnobia ) (Diptera, Limoniidae) in Mainland China with Two New Species",
+      "link": "https://doi.org/10.3390/insects17070690",
+      "summary": "The crane fly subgenus Sivalimnobia has been taxonomically stagnant for over half a century, with its apparent absence from mainland China representing a major biogeographic anomaly. We address this by integrating detailed morphology and COI DNA barcoding of specimens collected across 14 Chinese provinces. Our study…",
+      "source": "Insects",
+      "source_id": "europepmc",
+      "date": "2026-07-02T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "China with",
+        "Sivalimnobia has been",
+        "China representing"
+      ]
+    },
+    {
+      "id": "5afcc6ea57f943b5",
+      "title": "Five New Species of Orthosinus Motschulsky, 1863 from China-Molecular Evidence for Two Species (Coleoptera, Curculionidae, Dryophthorinae)",
+      "link": "https://doi.org/10.3390/insects17070691",
+      "summary": "Five new species of Orthosinus Motschulsky, 1863 from China are described: O. borisi sp. nov. (♂♀) and O. urceolatus sp. nov. (♂♀) from Xizang Autonomous Region, O. diaoluoshanensis sp. nov. (♂) from Hainan Province, O. sulcatus sp. nov. (♂♀) from Sichuan Province and O. tengchongensis sp. nov. (♂) from Yunnan…",
+      "source": "Insects",
+      "source_id": "europepmc",
+      "date": "2026-07-02T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Evidence for",
+        "Five new species",
+        "China are described"
+      ]
+    },
+    {
+      "id": "8d250ae338e70d56",
+      "title": "A revision of the bagworm moths of Madagascar with 26 new species and a checklist update (Lepidoptera, Psychidae) ",
+      "link": "https://doi.org/10.11646/zootaxa.5843.1.1",
+      "summary": "Many insects of Madagascar are still to be described; it is notably the case of most Psychidae. This study is aimed at describing and reviewing the Typhoniinae species from Madagascar, bagworm moths mostly collected by Pierre Viette and his colleagues in the 1950s and preserved in the Muséum National d'Histoire…",
+      "source": "Zootaxa",
+      "source_id": "europepmc",
+      "date": "2026-07-02T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Madagascar with",
+        "Many insects",
+        "Madagascar are still"
+      ]
+    },
+    {
+      "id": "b3a81ae40637f2b7",
+      "title": "A single-cell atlas of alternative wing development in two hemipteran species",
+      "link": "https://www.nature.com/articles/s41467-026-75225-z",
+      "summary": "",
+      "source": "Nature (Entomology)",
+      "source_id": "nature-entomology",
+      "date": "2026-07-02T00:00:00+00:00",
+      "score": 25,
+      "rare": false,
+      "species": []
+    },
+    {
+      "id": "826a8892fecbd718",
+      "title": "Issue Information",
+      "link": "https://resjournals.onlinelibrary.wiley.com/doi/10.1111/syen.70053?af=R",
+      "summary": "Systematic Entomology, Volume 51, Issue 4, October‐December 2026.",
+      "source": "Systematic Entomology",
+      "source_id": "wiley-sysent",
+      "date": "2026-07-01T16:52:42+00:00",
+      "score": 90,
+      "rare": true,
+      "species": []
+    },
+    {
+      "id": "25257f726af5c1b0",
+      "title": "Long‐branch attraction and incomplete lineage sorting explain the unstable high‐level position of eriophyoid mites in the arachnid tree of life",
+      "link": "https://resjournals.onlinelibrary.wiley.com/doi/10.1111/syen.70063?af=R",
+      "summary": "Systematic Entomology, Volume 51, Issue 3, July‐September 2026.",
+      "source": "Systematic Entomology",
+      "source_id": "wiley-sysent",
+      "date": "2026-07-01T07:00:00+00:00",
+      "score": 90,
+      "rare": true,
+      "species": []
+    },
+    {
+      "id": "41ee7cd612ece4eb",
+      "title": "Two new species of Polyrhachis from the subgenera Myrma and Myrmhopla (Hymenoptera: Formicidae) from China",
+      "link": "https://doi.org/10.1093/jisesa/ieag070",
+      "summary": "Based on the morphological characters of the worker caste, a taxonomic study of the ant genus Polyrhachis Smith 1857 from China was conducted. Two new species, Polyrhachis (Myrma) aureodorsalis, sp. nov. and Polyrhachis (Myrmhopla) mangensis, sp. nov. are described from Fujian and Yunnan Provinces, respectively…",
+      "source": "Journal of insect science (Online)",
+      "source_id": "europepmc",
+      "date": "2026-07-01T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Two new species",
+        "Polyrhachis from the",
+        "Myrma and"
+      ]
+    },
+    {
+      "id": "7b2d457792c4f757",
+      "title": "The open-ended genus Dexosarcophaga (Diptera: Sarcophagidae): six new species from the Brazilian Amazon and new distributional records",
+      "link": "https://doi.org/10.1093/jme/tjag093",
+      "summary": "Six new species of Dexosarcophaga Townsend, 1917 are described based on specimens from the Brazilian Amazon: Dexosarcophaga akamai sp. nov., Dexosarcophaga ducke sp. nov., Dexosarcophaga ribeirinha sp. nov., Dexosarcophaga harin sp. nov., Dexosarcophaga mamiraua sp. nov., and Dexosarcophaga gorayebi sp. nov. Male…",
+      "source": "Journal of medical entomology",
+      "source_id": "europepmc",
+      "date": "2026-07-01T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Amazon and new",
+        "Six new species",
+        "Dexosarcophaga akamai"
+      ]
+    },
+    {
+      "id": "6098f5a535d68487",
+      "title": "Butterflies with low thermoregulatory capacity show greatest upwards range shifts along an elevational gradient",
+      "link": "https://www.nature.com/articles/s42003-026-10534-z",
+      "summary": "",
+      "source": "Nature (Entomology)",
+      "source_id": "nature-entomology",
+      "date": "2026-07-01T00:00:00+00:00",
+      "score": 50,
+      "rare": false,
+      "species": [
+        "Butterflies with low"
+      ]
+    },
+    {
+      "id": "9fcf92a0caed53f0",
+      "title": "Integrative morphological and DNA barcoding analysis of Forcipomyia (Lasiohelea) midges: cryptic diversity and first molecular detection of multiple Leishmania species in a leishmaniasis-endemic focus in Southern Thailand",
+      "link": "https://doi.org/10.1186/s13071-026-07544-5",
+      "summary": "Background Ceratopogonid midges of the genus Forcipomyia (subgenus Lasiohelea) are small hematophagous insects widely distributed across tropical regions. In Australia, developmental stages of Leishmania (Mundinia) macropodum have been observed in Forcipomyia (Lasiohelea), suggesting that biting midges may play a…",
+      "source": "Parasites & vectors",
+      "source_id": "europepmc",
+      "date": "2026-06-30T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Integrative morphological and",
+        "Forcipomyia (Lasiohelea) midges",
+        "Leishmania species"
+      ]
+    },
+    {
+      "id": "38cfdd50ccf6bb83",
+      "title": "Temporal orchestration of transcriptional and epigenomic programming underlying maternal embryonic diapause in a cricket model",
+      "link": "https://www.nature.com/articles/s42003-026-10402-w",
+      "summary": "",
+      "source": "Nature (Entomology)",
+      "source_id": "nature-entomology",
+      "date": "2026-06-30T00:00:00+00:00",
+      "score": 50,
+      "rare": false,
+      "species": [
+        "Temporal orchestration"
+      ]
+    },
+    {
+      "id": "a8efb3485c7fcf27",
+      "title": "Description of a New Species of Caliscelidae from the High Altitude Region of Xizang Based on Morphological and Molecular Evidence † ",
+      "link": "https://doi.org/10.3390/insects17070667",
+      "summary": "This study describes a new species of the family Caliscelidae (Hemiptera) from the Xizang region of China- Peltonotellus lasaensis sp. nov. Through integrated morphological examination (including external morphology and genitalia dissection), and mitochondrial gene (COI) sequence analysis, the taxonomic status of…",
+      "source": "Insects",
+      "source_id": "europepmc",
+      "date": "2026-06-25T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Caliscelidae from the",
+        "Morphological and",
+        "Caliscelidae (Hemiptera) from the"
+      ]
+    },
+    {
+      "id": "5573b754a56ed750",
+      "title": "A new species of the subterranean genus Zhijinaphaenops Uéno, 2002, from a Karst Cave in Guizhou, China (Coleoptera: Carabidae: Trechini) ",
+      "link": "https://doi.org/10.11646/zootaxa.5837.2.12",
+      "summary": "A new eyeless species, Zhijinaphaenops lianhuaensis sp. nov. , has been discovered within Lianhua Cave, Puding County, Anshun City, Guizhou Province. This new species was discovered in the same cave where the paratype specimens of Z. pubescens Uéno & Ran, 2002 were collected earlier. However, comparative examination…",
+      "source": "Zootaxa",
+      "source_id": "europepmc",
+      "date": "2026-06-23T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Zhijinaphaenops lianhuaensis"
+      ]
+    },
+    {
+      "id": "df069f28d1d11a4f",
+      "title": "Dolichogenidea glyphodes , sp. nov. (Hymenoptera: Braconidae: Microgastrinae), a parasitoid of Glyphodes caesalis (Walker) (Lepidoptera: Crambidae) ",
+      "link": "https://doi.org/10.11646/zootaxa.5837.2.10",
+      "summary": "One new species of the genus Dolichogenidea Viereck, 1911, Dolichogenidea glyphodes Long & Dat, sp. nov. , is described and fully illustrated based on series of specimens collected from gregarious cocoons of borers feeding on jackfruits, Glyphodes caesalis (Walker, 1859). The new species appears to be relatively…",
+      "source": "Zootaxa",
+      "source_id": "europepmc",
+      "date": "2026-06-23T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Dolichogenidea glyphodes",
+        "Glyphodes caesalis",
+        "One new species"
+      ]
+    },
+    {
+      "id": "c2564fcbc74cd0e2",
+      "title": "Rewiring of two conserved signalling hubs into one axis underlies convergent female-specific wing regression in insects",
+      "link": "https://www.nature.com/articles/s41559-026-03107-0",
+      "summary": "",
+      "source": "Nature (Entomology)",
+      "source_id": "nature-entomology",
+      "date": "2026-06-17T00:00:00+00:00",
+      "score": 50,
+      "rare": false,
+      "species": []
+    },
+    {
+      "id": "854c9022d4e7349d",
+      "title": "Evolution of increased longevity and slowed ageing in a genus of tropical butterfly",
+      "link": "https://www.nature.com/articles/s41467-026-73635-7",
+      "summary": "",
+      "source": "Nature (Entomology)",
+      "source_id": "nature-entomology",
+      "date": "2026-06-16T00:00:00+00:00",
+      "score": 50,
+      "rare": false,
+      "species": []
+    },
+    {
+      "id": "13fba35cc655242e",
+      "title": "Description of a new species Drepanosticta minhanhiana sp. nov. and detailed structural notes on D. halterata (Brauer, 1868) from Luzon, the Philippines (Odonata: Platystictidae) ",
+      "link": "https://doi.org/10.11646/zootaxa.5831.2.7",
+      "summary": "Drepanosticta minhanhiana sp. nov. (holotype ♂: 15.26416° N, 121.35115° E; 69 m a.s.l.; deposited at Cavite State University, Philippines) is described from Luzon Island, the Philippines, based on specimens of both sexes. The new species can be distinguished from its congeners by the differential characters of the…",
+      "source": "Zootaxa",
+      "source_id": "europepmc",
+      "date": "2026-06-15T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Drepanosticta minhanhiana"
+      ]
+    },
+    {
+      "id": "33ab1800e8f25892",
+      "title": "Description of Tanytarsus binduensis sp. nov. and T. tamakutibasi Sasa (Diptera: Chironomidae) from India with their phylogenetic placement ",
+      "link": "https://doi.org/10.11646/zootaxa.5831.1.1",
+      "summary": "A new species, Tanytarsus binduensis of the ' triangularis ' species group of the genus Tanytarsus van der Wulp, 1874 is described based on the adult males from the Himalaya Biodiversity Hotspot, West Bengal, India. This is the first record of this species group from the Oriental region. We also present a…",
+      "source": "Zootaxa",
+      "source_id": "europepmc",
+      "date": "2026-06-12T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Tanytarsus binduensis",
+        "India with their",
+        "Tanytarsus van der"
+      ]
+    },
+    {
+      "id": "077d8c76ae27cd21",
+      "title": "A new genus and species of Rhopalophorini (Coleoptera, Cerambycidae, Cerambycinae) and new records in Cerambycinae and Lamiinae ",
+      "link": "https://doi.org/10.11646/zootaxa.5828.3.3",
+      "summary": "The species-group names of Erythrochiton Zajciw, 1957 are corrected. Seventeen new state records are reported for the Brazilian state of Mato Grosso do Sul and one for the state of Maranhão. Gorybia tibialis Martins, 1976 is recorded from Brazil for the first time. Kolobophora dolia , representing both a new genus…",
+      "source": "Zootaxa",
+      "source_id": "europepmc",
+      "date": "2026-06-10T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Cerambycinae and",
+        "Seventeen new state",
+        "Brazilian state"
+      ]
+    },
+    {
+      "id": "d9e14158b631efd1",
+      "title": "DNA barcodes reveal cryptic species of Cricotopus ( Pseudocricotopus ) montanus species group (Diptera: Chironomidae) from Oriental China ",
+      "link": "https://doi.org/10.11646/zootaxa.5828.3.4",
+      "summary": "Two cryptic species of Cricotopus ( Pseudocricotopus ) montanus species group (Diptera: Chironomidae) from Oriental China have been discovered by DNA barcodes. Cricotopus ( Pseudocricotopus ) motuoensis Chen & Lin, sp. nov. , and Cricotopus ( Pseudocricotopus ) neomatudigitatus Chen & Lin, sp. nov. are described and…",
+      "source": "Zootaxa",
+      "source_id": "europepmc",
+      "date": "2026-06-10T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Two cryptic species",
+        "China have been"
+      ]
+    },
+    {
+      "id": "5cd3e12f84bf49bc",
+      "title": "Queen cell architecture shapes honey bee queen development",
+      "link": "https://www.nature.com/articles/s41586-026-10534-3",
+      "summary": "",
+      "source": "Nature (Entomology)",
+      "source_id": "nature-entomology",
+      "date": "2026-06-03T00:00:00+00:00",
+      "score": 50,
+      "rare": false,
+      "species": [
+        "Queen cell architecture"
+      ]
+    },
+    {
+      "id": "e9aa9cafd0abd1d0",
+      "title": "High genetic diversity and cryptic lineages in three Tabanus species (Diptera: Tabanidae) from Northeastern Thailand",
+      "link": "https://doi.org/10.47665/tb.43.2.004",
+      "summary": "Species of the genus Tabanus Linnaeus (horse flies) are significant pests and vectors transmitting pathogens to economically important animals including cattle. Therefore, knowledge about genetic diversity; a necessity for understanding disease epidemiology, is of paramount importance. However, such information is…",
+      "source": "Tropical biomedicine",
+      "source_id": "europepmc",
+      "date": "2026-06-01T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "High genetic diversity",
+        "Tabanus species"
+      ]
+    },
+    {
+      "id": "fa5989cdeacbad46",
+      "title": "Early hexapod genomes reveal the deep origin of insect gustatory and odorant receptors",
+      "link": "https://www.nature.com/articles/s41467-026-73718-5",
+      "summary": "",
+      "source": "Nature (Entomology)",
+      "source_id": "nature-entomology",
+      "date": "2026-05-27T00:00:00+00:00",
+      "score": 50,
+      "rare": false,
+      "species": []
+    },
+    {
+      "id": "37f43d20389334cf",
+      "title": "Juvenile hormone-mediated chromatin remodelling by cumulative action of downstream transcription factors, Hairy and Krüppel homolog 1",
+      "link": "https://www.nature.com/articles/s42003-026-10327-4",
+      "summary": "",
+      "source": "Nature (Entomology)",
+      "source_id": "nature-entomology",
+      "date": "2026-05-26T00:00:00+00:00",
+      "score": 25,
+      "rare": false,
+      "species": [
+        "Juvenile hormone",
+        "Hairy and"
+      ]
+    },
+    {
+      "id": "398b026e305a2d04",
+      "title": "miR-318 regulates juvenile hormone biosynthesis to control ovarian development in Bactrocera dorsalis",
+      "link": "https://www.nature.com/articles/s42003-026-10227-7",
+      "summary": "",
+      "source": "Nature (Entomology)",
+      "source_id": "nature-entomology",
+      "date": "2026-05-13T00:00:00+00:00",
+      "score": 25,
+      "rare": false,
+      "species": [
+        "Bactrocera dorsalis"
+      ]
+    },
+    {
+      "id": "89e02d61cac52162",
+      "title": "Host serum-circulating flavivirus NS1 co-opts mosquito miRNA processing to suppress early immune defense",
+      "link": "https://www.nature.com/articles/s41467-026-72631-1",
+      "summary": "",
+      "source": "Nature (Entomology)",
+      "source_id": "nature-entomology",
+      "date": "2026-05-08T00:00:00+00:00",
+      "score": 25,
+      "rare": false,
+      "species": [
+        "Host serum"
+      ]
+    },
+    {
+      "id": "28cef817d2daddc6",
+      "title": "Ocnogyna florianii- a new species from the Sichuan Province, China (Lepidoptera, Erebidae) ",
+      "link": "https://doi.org/10.11646/zootaxa.5802.3.11",
+      "summary": "A new species of the genus Ocnogyna Lederer, 1853, O. florianii sp. nov. , is described from Sichuan Province, China. It is the first species of the genus known from East Asia; previously, Ocnogyna loewii pallidior Christoph, 1884 was reportedly the easternmost taxon distributed in Central Asia from Turkmenistan to…",
+      "source": "Zootaxa",
+      "source_id": "europepmc",
+      "date": "2026-05-05T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Ocnogyna florianii",
+        "Ocnogyna loewii pallidior",
+        "Asia from"
+      ]
+    },
+    {
+      "id": "0c9006f0b0ef0bb9",
+      "title": "Rasnitsynitilla Lelej of Tunisia: a new species and key to females of this genus and related Smicromyrme Thomson (Hymenoptera: Mutillidae) ",
+      "link": "https://doi.org/10.11646/zootaxa.5802.3.8",
+      "summary": "Rasnitsynitilla poneli Romano & Lo Cascio, sp. nov. is described and illustrated from Tunisia, representing the first record of the genus Rasnitsynitilla Lelej, 2006 for this country. The new species is readily distinguished from congeners by the dense coppery-golden setae on the head and mesosoma and by the…",
+      "source": "Zootaxa",
+      "source_id": "europepmc",
+      "date": "2026-05-05T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Rasnitsynitilla poneli"
+      ]
+    },
+    {
+      "id": "1904147037cf6d9c",
+      "title": "Review of the subgenus Gerris s.str. in China (Hemiptera: Gerridae), with description of a new species from the Tibetan Plateau ",
+      "link": "https://doi.org/10.11646/zootaxa.5802.3.2",
+      "summary": "The subgenus Gerris ( Gerris s.str.) Fabricius, 1794 in China is reviewed. Gerris xizangensis sp. nov. from Jilong, Xizang is described. Additionally, two species, G. argentatus Schummel, 1832, and G. curvus Tran & Polhemus, 2012, are reported for the first time from China. Diagnoses and new distribution records are…",
+      "source": "Zootaxa",
+      "source_id": "europepmc",
+      "date": "2026-05-05T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Gerris xizangensis",
+        "Diagnoses and new"
+      ]
+    },
+    {
+      "id": "1fdc218290e4e799",
+      "title": "Revisiting Colobura (Lepidoptera: Nymphalidae): Using integrative taxonomy to identify a new species, C. cryptica sp. nov., and revise geographic boundaries ",
+      "link": "https://doi.org/10.11646/zootaxa.5802.2.4",
+      "summary": "The Neotropical butterfly genus Colobura Billberg, 1820 (Nymphalidae) includes widespread, common and conspicuous species whose taxonomy one might expect to be well understood. Using integrative taxonomy-combining morphology (genitalia, larval traits, adult wing patterns, and UV reflectance), genome sequencing…",
+      "source": "Zootaxa",
+      "source_id": "europepmc",
+      "date": "2026-05-04T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Neotropical butterfly genus"
+      ]
+    },
+    {
+      "id": "bb2f1d2a94d53158",
+      "title": "Description of a new species of the genus Protacallodes Morimoto (Coleoptera: Curculionidae: Molytinae) from Japan, with notes on other Japanese species and a key to all known species ",
+      "link": "https://doi.org/10.11646/zootaxa.5802.2.5",
+      "summary": "A new species of the genus Protacallodes Morimoto, 2011 (Molytinae), Protacallodes gracilirostris Tsuji & Yoshitake sp . nov ., is described from Japan (Honshu, Kyushu, and the Nansei Islands), based on morphological characteristics including male and female terminalia. Renewed diagnoses for two Japanese species (…",
+      "source": "Zootaxa",
+      "source_id": "europepmc",
+      "date": "2026-05-04T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Japanese species and",
+        "Protacallodes gracilirostris",
+        "Renewed diagnoses for"
+      ]
+    },
+    {
+      "id": "07dce89a5b8570cd",
+      "title": "A new species and three new synonyms of Helochares Mulsant, 1844 from China (Coleoptera: Hydrophilidae: Acidocerinae) ",
+      "link": "https://doi.org/10.11646/zootaxa.5802.2.9",
+      "summary": "A new species of the water scavenger beetle genus Helochares Mulsant, 1844, Helochares baopingi sp. nov. is described from Yunnan Province of China. Three new synonyms are proposed: Helochares tengchongensis Dong & Bian, 2021 and H. guoi Yang & Jia, 2021 are synonymized with H. densus Sharp, 1890. H. wuzhifengensis…",
+      "source": "Zootaxa",
+      "source_id": "europepmc",
+      "date": "2026-05-04T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Helochares baopingi",
+        "Three new synonyms",
+        "Helochares tengchongensis"
+      ]
+    },
+    {
+      "id": "94ac9daf9a9bcc18",
+      "title": "Systematic revision of the genus Thapaia Dmitriev & Dietrich (Hemiptera: Cicadellidae: Typhlocybinae: Erythroneurini) with descriptions of three new species ",
+      "link": "https://doi.org/10.11646/zootaxa.5802.1.9",
+      "summary": "Three new species of the genus Thapaia Dmitriev & Dietrich, 2006 (Hemiptera: Cicadellidae: Typhlocybinae) are described and illustrated: T. cavitrigona , T. elongata , and T. jinghongensis spp. nov. Specimens were collected from Thailand and China. Detailed morphological descriptions, illustrations of male genitalia…",
+      "source": "Zootaxa",
+      "source_id": "europepmc",
+      "date": "2026-05-01T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Three new species",
+        "Specimens were collected",
+        "Thailand and"
+      ]
+    },
+    {
+      "id": "020cb880fcc1e249",
+      "title": "A new species of Casinaria (Hymenoptera: Ichneumonidae) parasitizing on Aporia hippia (Lepidoptera: Pieridae) from China, and its complete mitochondrial genome ",
+      "link": "https://doi.org/10.11646/zootaxa.5802.1.3",
+      "summary": "A new species, Casinaria qinghaia Li, sp. nov. , is described and illustrated. It was reared from the larvae of Aporia hippia (Bremer, 1861) (Pieridae) in Qinghai Province, P.R. China. Through Illumina sequencing technology, we have sequenced and annotated the mitochondrial genome of C . qinghaia , serving as the…",
+      "source": "Zootaxa",
+      "source_id": "europepmc",
+      "date": "2026-05-01T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Aporia hippia",
+        "Casinaria qinghaia",
+        "It was reared"
+      ]
+    },
+    {
+      "id": "0ce04cedf25d6e27",
+      "title": "Two new species of the cicada genus Auritibicen (Hemiptera: Cicadidae) from China ",
+      "link": "https://doi.org/10.11646/zootaxa.5802.1.6",
+      "summary": "Two new species of the genus Auritibicen , A. nani Wang & Wei sp. nov. and A. bofani Wang & Wei sp. nov. , are described, which were discovered from Mount Emei and the Shennongjia Mountains, China, respectively. The relationships of the two new species to related taxa are discussed based on morphological characters…",
+      "source": "Zootaxa",
+      "source_id": "europepmc",
+      "date": "2026-05-01T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Two new species",
+        "Emei and the"
+      ]
+    },
+    {
+      "id": "93f6bcec986c8ec5",
+      "title": "A new species of the genus Bryodema Fieber, 1853 from Inner Mongolia, China (Orthoptera: Acridoidea: Oedipodidae) ",
+      "link": "https://doi.org/10.11646/zootaxa.5802.1.12",
+      "summary": "Europe PMC",
+      "source": "Zootaxa",
+      "source_id": "europepmc",
+      "date": "2026-05-01T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": []
+    },
+    {
+      "id": "df208ad6072acb55",
+      "title": "A new species and molecular phylogeny of the Platycerus bashanicus species group (Coleoptera: Lucanidae) endemic to China ",
+      "link": "https://doi.org/10.11646/zootaxa.5792.2.6",
+      "summary": "A new species in the Platycerus bashanicus species group, Platycerus dabiemontanus Zhang & Kubota, sp. nov. , is described from Anhui Province, China. The molecular phylogeny based on mitochondrial COI and nuclear ITS2 sequences indicates a close relationship of this new species with P. yeren Imura, 2008 and P. canae…",
+      "source": "Zootaxa",
+      "source_id": "europepmc",
+      "date": "2026-04-13T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Platycerus bashanicus species",
+        "Platycerus dabiemontanus"
+      ]
+    },
+    {
+      "id": "84aadb158a60cd2f",
+      "title": "A new species of Megaulacobothrus Caudell (Orthoptera, Arcypteridae) from the Dabie Mountains area of China ",
+      "link": "https://doi.org/10.11646/zootaxa.5792.2.11",
+      "summary": "Europe PMC",
+      "source": "Zootaxa",
+      "source_id": "europepmc",
+      "date": "2026-04-13T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Mountains area"
+      ]
+    },
+    {
+      "id": "10cbb7a47750e43a",
+      "title": "Description of Apheledessa gen. nov. (Hemiptera: Heteroptera: Pentatomidae: Edessinae) with two new species from the Brazilian Atlantic Forest ",
+      "link": "https://doi.org/10.11646/zootaxa.5792.2.4",
+      "summary": "The new genus Apheledessa gen. nov. , described here, comprises two new species: Apheledessa absens sp. nov. and Apheledessa inopia sp. nov. The genus is diagnosed based on a unique combination of characters, including well-developed, subrectangular, dorsoventrally flattened humeral angles, and a metasternal process…",
+      "source": "Zootaxa",
+      "source_id": "europepmc",
+      "date": "2026-04-13T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Apheledessa gen",
+        "Apheledessa absens",
+        "Apheledessa inopia"
+      ]
+    },
+    {
+      "id": "9f2f461aec017eed",
+      "title": "The saucer bug genus Ctenipocoris Montandon, 1897 (Hemiptera: Heteroptera: Naucoridae): new species from Guyana and India and catalog of world species ",
+      "link": "https://doi.org/10.11646/zootaxa.5792.1.3",
+      "summary": "The saucer bug genus Ctenipocoris (Naucoridae: Laccocorinae: Ctenipocorini) is circumtropical and represented by nine species that are seldomly collected. Most non-genitalic features differ negligibly among species, thereby making identifications tenuous; however, some of these features and previously unreported male…",
+      "source": "Zootaxa",
+      "source_id": "europepmc",
+      "date": "2026-04-10T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Guyana and",
+        "India and catalog",
+        "Most non"
+      ]
+    },
+    {
+      "id": "e0610ad3fde83841",
+      "title": "Three new species of Azana Walker (Diptera: Mycetophilidae: Sciophilinae) from South Korea ",
+      "link": "https://doi.org/10.11646/zootaxa.5787.3.10",
+      "summary": "The genus Azana Walker is a small group within the family Mycetophilidae, comprising 17 described species globally. However, it has not been previously studied in Korea. This study describes three new species of the genus from South Korea: Azana dentata sp. nov. , Azana lunulata sp. nov. , and Azana tricona sp. nov…",
+      "source": "Zootaxa",
+      "source_id": "europepmc",
+      "date": "2026-04-08T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Three new species",
+        "Azana dentata",
+        "Azana lunulata"
+      ]
+    },
+    {
+      "id": "0dd2376652480382",
+      "title": "A review of Chinese Xenidae (Insecta: Strepsiptera) with the description of two new record genera and one new species ",
+      "link": "https://doi.org/10.11646/zootaxa.5787.2.7",
+      "summary": "Xenidae represents the third largest family within the order Strepsiptera, comprising parasites of various wasps and hornets. In this study, we update the checklist of Chinese Xenidae by reporting two newly recorded genera, Nipponoxenos Kifune & Maeta, 1975 and Sphecixenos Benda, Pohl, Nakase, Beutel & Straka, 2022…",
+      "source": "Zootaxa",
+      "source_id": "europepmc",
+      "date": "2026-04-07T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Xenidae represents the",
+        "In this study"
+      ]
+    },
+    {
+      "id": "e969db72121524b8",
+      "title": "Two new species of the genus Parareicheia Jeannel, 1957 (Coleoptera: Carabidae: Scaritinae: Clivinini: Reicheiina) from Portugal, with faunistic notes on Anillini ",
+      "link": "https://doi.org/10.11646/zootaxa.5787.2.8",
+      "summary": "Two new microphtalmic beetle species of the genus Parareicheia Jeannel, 1957, from Portugal are described: Parareicheia renei sp. nov. and Parareicheia barrosi sp. nov. These endogean species are diagnosed and compared with closely related endemic species from the Iberian Peninsula. The external morphology and male…",
+      "source": "Zootaxa",
+      "source_id": "europepmc",
+      "date": "2026-04-07T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Two new species",
+        "Two new microphtalmic",
+        "Portugal are described"
+      ]
+    },
+    {
+      "id": "89b58020d076f8c8",
+      "title": "Description of a new species of Micreriodes Yoshimoto, 1962 (Hymenoptera: Figitidae: Eucoilinae) from the Atlantic Forest in the State of Paraná, Brazil ",
+      "link": "https://doi.org/10.11646/zootaxa.5787.2.10",
+      "summary": "A new species of the genus Micreriodes Yoshimoto is described and illustrated in the fauna of the State of Paraná, Brazil: Micreriodes lautus sp. nov. The morphological differences with Micreriodes guamensis are also analyzed. This is the first time any specimen of the genus has ever been identified at the species…",
+      "source": "Zootaxa",
+      "source_id": "europepmc",
+      "date": "2026-04-07T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Micreriodes lautus",
+        "Micreriodes guamensis are"
+      ]
+    },
+    {
+      "id": "50d2b17833e47cc0",
+      "title": "One new species of the genus Sinocyrtaspis Liu, 2000 (Orthoptera: Tettigoniidae: Meconematinae) from Hubei, China ",
+      "link": "https://doi.org/10.11646/zootaxa.5787.2.11",
+      "summary": "Europe PMC",
+      "source": "Zootaxa",
+      "source_id": "europepmc",
+      "date": "2026-04-07T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "One new species"
+      ]
+    },
+    {
+      "id": "b708403c546bd0d7",
+      "title": "On Lamiinae (Cerambycidae, Coleoptera) from the Neotropical region: new species and taxonomic notes ",
+      "link": "https://doi.org/10.11646/zootaxa.5787.2.6",
+      "summary": "Two new species are described from Mexico: Colombicallia copei sp. nov. (Calliini); and Estoloides poggii sp. nov. (Desmiphorini). A key to species of Colombicallia Galileo & Martins, 1992 is provided. The holotype of Drycothaea guatemalana Breuning, 1950 is illustrated for the first time, and this species, together…",
+      "source": "Zootaxa",
+      "source_id": "europepmc",
+      "date": "2026-04-07T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Neotropical region",
+        "Two new species",
+        "Colombicallia copei"
+      ]
+    },
+    {
+      "id": "2026ab20050109bc",
+      "title": "A peculiar new species of Tanytarsus van der Wulp (Diptera: Chironomidae) from Oriental China ",
+      "link": "https://doi.org/10.11646/zootaxa.5787.1.10",
+      "summary": "Europe PMC",
+      "source": "Zootaxa",
+      "source_id": "europepmc",
+      "date": "2026-04-02T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Tanytarsus van der"
+      ]
+    },
+    {
+      "id": "02d8272b29d25c86",
+      "title": "Hidden in plain sight: Cryptic pupation behavior of Necrobia rufipes and Dermestes maculatus",
+      "link": "https://doi.org/10.1016/j.forsciint.2026.112931",
+      "summary": "Late-stage colonizing beetles provide critical entomological evidence in cases where dipteran indicators are absent or degraded; however, their pupation ecology remains insufficiently documented, particularly regarding microhabitat selection. The present study investigated substrate-specific pupation preferences of…",
+      "source": "Forensic science international",
+      "source_id": "europepmc",
+      "date": "2026-03-17T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Cryptic pupation behavior",
+        "Necrobia rufipes and",
+        "Dermestes maculatus"
+      ]
+    },
+    {
+      "id": "98a00d165f13945d",
+      "title": "Vermiophis luqianlei sp. nov., a new species of wormlion fly (Diptera: Vermileonidae) from Guizhou, China, with notes on its immature stages and biology ",
+      "link": "https://doi.org/10.11646/zootaxa.5763.4.7",
+      "summary": "The genus Vermiophis Yang, 1979 is endemic to China and previously comprised eight known species. In the present study, a new species, Vermiophis luqianlei sp. nov. , from Xishui, Guizhou, China, is described. This new species closely resembles V. wudangensis Yang & Chen, 1986, but differs from it in several key…",
+      "source": "Zootaxa",
+      "source_id": "europepmc",
+      "date": "2026-03-05T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Vermiophis luqianlei",
+        "China and previously",
+        "In the present"
+      ]
+    },
+    {
+      "id": "67b904111af99b58",
+      "title": "A remarkable moss-mimicking new species of genus Pericentrus (Phasmatodea: Lonchodidae: Lonchodini) from Xizang, China, with significantly reduced antennal length ",
+      "link": "https://doi.org/10.11646/zootaxa.5763.4.5",
+      "summary": "A remarkable moss-mimicking new species, Pericentrus cryptopetalus sp. nov. , is described from Xizang, China. This species exhibits a marked reduction in antennae length relative to its congeners. An updated key to the females of this genus is provided, and hypotheses regarding the antennae reduction are discussed…",
+      "source": "Zootaxa",
+      "source_id": "europepmc",
+      "date": "2026-03-05T00:00:00+00:00",
+      "score": 50,
+      "rare": true,
+      "species": [
+        "Pericentrus cryptopetalus",
+        "An updated key"
+      ]
+    },
+    {
+      "id": "fa63c437c25c2f9d",
+      "title": "New record of the genus Eudemopsis Falkovitsh (Tortricidae: Olethreutinae) from India, with description of two new species ",
+      "link": "https://doi.org/10.11646/zootaxa.5763.2.3",
+      "summary": "The genus Eudemopsis Falkovitsh, 1962 (Lepidoptera: Tortricidae: Olethreutinae) is recorded for the first time from India, based on the discovery of two new species, Eudemopsis hunliensis sp. nov. and Eudemopsis gobuka sp. nov. Detailed descriptions and diagnostic characters are provided, along with illustrations of…",
+      "source": "Zootaxa",
+      "source_id": "europepmc",
+      "date": "2026-03-03T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "New record",
+        "Eudemopsis hunliensis",
+        "Eudemopsis gobuka"
+      ]
+    },
+    {
+      "id": "c46394d9697b25af",
+      "title": "Two new species and a new genus of soft scale insects (Hemiptera: Coccomorpha: Coccidae) from the Brazilian Cerrado ",
+      "link": "https://doi.org/10.11646/zootaxa.5763.2.4",
+      "summary": "Two new species of soft scale insect (Hemiptera: Coccomorpha: Coccidae) from the Brazilian Cerrado are described and illustrated based on the adult females. A new monotypic genus, Cerradococcus Kondo, Pacheco da Silva & Peronti, gen. nov. , is erected to accommodate Cerradococcus gillianwatsonae Kondo, Pacheco da…",
+      "source": "Zootaxa",
+      "source_id": "europepmc",
+      "date": "2026-03-03T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Two new species",
+        "Cerrado are described",
+        "Cerradococcus gillianwatsonae"
+      ]
+    },
+    {
+      "id": "4e07febdac90bd8f",
+      "title": "A new species of Platydecticus (Orthoptera: Tettigoniidae) from the Coastal Atacama Desert in Chile ",
+      "link": "https://doi.org/10.11646/zootaxa.5763.2.7",
+      "summary": "Platydecticus pasaptur sp. nov. is described based on both males and females. The species is easily distinguishable by the following combination of characters: narrow and sulcate fastigium; in males, the subgenital plate unmodified, broad pseudocercus, short cerci and titillator median lobe digitiform, sulcate, and…",
+      "source": "Zootaxa",
+      "source_id": "europepmc",
+      "date": "2026-03-03T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Platydecticus pasaptur"
+      ]
+    },
+    {
+      "id": "b5a18e393c2aa200",
+      "title": "Taxonomic Contributions to the Lithosiini (Lepidoptera: Erebidae: Arctiinae) from India: Description of Two New Species and Seven New Species Records ",
+      "link": "https://doi.org/10.11646/zootaxa.5763.1.4",
+      "summary": "Two new species of lichen moths (Erebidae: Arctiinae: Lithosiini) are described from India: Caulocera hollowayi sp. nov. from Sikkim and Asura buxa sp. nov. from West Bengal. In addition, seven species records are newly reported and re-described: Fangeilema amoena Volynkin & Saldaitis, 2023 from West Bengal, Collita…",
+      "source": "Zootaxa",
+      "source_id": "europepmc",
+      "date": "2026-03-02T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Species and",
+        "Two new species",
+        "Caulocera hollowayi"
+      ]
+    },
+    {
+      "id": "c8cdbbc4cc1d26cb",
+      "title": "A taxonomic study of Asian soldier beetles of the tribe Malthinini (Coleoptera, Cantharidae, Malthininae), with description of a new genus and a new species of Malthinellus , and notes on the genera Malthinus and Mimomalthinus ",
+      "link": "https://doi.org/10.11646/zootaxa.5763.1.3",
+      "summary": "The malthinine fauna of Asia is highly diverse, but comprehensive studies are lacking, and many species have not been re-examined since their original descriptions. This study mainly focuses on the genus Malthinellus Kiesenwetter, 1874, which comprises ten Asian species. A new species, Malthinellus mushanus sp. nov…",
+      "source": "Zootaxa",
+      "source_id": "europepmc",
+      "date": "2026-03-02T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Asian soldier beetles",
+        "Malthinus and",
+        "Asian species"
+      ]
+    },
+    {
+      "id": "4cd30f723f60ced7",
+      "title": "Wyeomyia ( Miamyia ) argentina , a new species of mosquito (Diptera: Culicidae) from Argentina ",
+      "link": "https://doi.org/10.11646/zootaxa.5760.5.3",
+      "summary": "Wyeomyia ( Miamyia ) argentina , a new mosquito species from Corrientes Province, northeastern Argentina, is described based on morphological characters of the adult female and male, male genitalia, pupa and fourth-instar larva. Morphological characteristics of Wy. argentina are compared with other species of…",
+      "source": "Zootaxa",
+      "source_id": "europepmc",
+      "date": "2026-02-26T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Morphological characteristics"
+      ]
+    },
+    {
+      "id": "2229ba6ce092f170",
+      "title": "Two new species and new records of subfamily Trypetinae (Diptera: Tephritidae) from India ",
+      "link": "https://doi.org/10.11646/zootaxa.5760.5.2",
+      "summary": "Two new species of subfamily Trypetinae, viz. Acidoxantha paratotoflava Maneesh & Hancock, sp. nov. and Hemilea suneriae Maneesh & Hancock, sp. nov. , are described from Himachal Pradesh, India along with keys to Indian species. Genus Rhagoletis Loew is recorded for the first time from India, from a species that is…",
+      "source": "Zootaxa",
+      "source_id": "europepmc",
+      "date": "2026-02-26T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Two new species",
+        "Acidoxantha paratotoflava",
+        "Hemilea suneriae"
+      ]
+    },
+    {
+      "id": "9fb0b14e5635e01e",
+      "title": "A FAIR description of an unusual new species of Furconthophagus Zunino, 1979 from Western Africa (Coleoptera: Scarabaeidae: Onthophagus ) ",
+      "link": "https://doi.org/10.11646/zootaxa.5759.1.6",
+      "summary": "Onthophagus ( Furconthophagus ) genieri Montanaro, sp. nov. from Bakor Forest in Senegal is described and illustrated. The new taxon is unusual in having transversely truncated protibiae in both sexes, similarly to the species of Caccobius Thomson, 1859. Its placement within the subgenus Furconthophagus Zunino, 1979…",
+      "source": "Zootaxa",
+      "source_id": "europepmc",
+      "date": "2026-02-13T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Its placement within"
+      ]
+    },
+    {
+      "id": "715d3d4bdabdaf8a",
+      "title": "Taxonomic turmoil around the genus Anoplistes Audinet-Serville, 1833 (Coleoptera: Cerambycidae) in the Uvs Nuur Basin: a new species, a new synonym, and a species reinstatement ",
+      "link": "https://doi.org/10.11646/zootaxa.5759.1.4",
+      "summary": "Anoplistes minutus Hammarström, 1892 stat. rev. , previously regarded as a subspecies of A. halodendri (Pallas, 1773), is reinstated as a valid species based on its clear morphological difference from the latter. This taxonomic decision automatically implies that all specimens of A . halodendri from Mongolia…",
+      "source": "Zootaxa",
+      "source_id": "europepmc",
+      "date": "2026-02-13T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Taxonomic turmoil around",
+        "Anoplistes minutus"
+      ]
+    },
+    {
+      "id": "c2203b180b860fbf",
+      "title": "A morphologically unusual new species of Phanuromyia Dodd (Hymenoptera: Scelionidae) from India ",
+      "link": "https://doi.org/10.11646/zootaxa.5759.1.5",
+      "summary": "Phanuromyia levigata Abitha, Rajmohana and Debnath sp. nov. (Hymenoptera: Scelionidae) is described from India incorporating both morphological and molecular characterizations. Among the members of Phanuromyia , this species is unusual in having prominent facial and malar striae. A multigene maximum likelihood tree…",
+      "source": "Zootaxa",
+      "source_id": "europepmc",
+      "date": "2026-02-13T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Phanuromyia levigata",
+        "Rajmohana and",
+        "India incorporating both"
+      ]
+    },
+    {
+      "id": "4c6f339738750385",
+      "title": "First record of the genus Uroxys Westwood, 1842 in Martinique (Lesser Antilles), with descriptions of two new species from cloud forests (Coleoptera: Scarabaeidae: Scarabaeinae) ",
+      "link": "https://doi.org/10.11646/zootaxa.5757.6.1",
+      "summary": "Two new species of Uroxys Westwood, 1842 are described from Martinique: Uroxys martinicensis Huchet, sp. nov. , and Uroxys aphanes Huchet, sp. nov. These species represent the first documented presence of Uroxys in Martinique. Both new species are flightless due to their brachypterous condition (reduced metathoracic…",
+      "source": "Zootaxa",
+      "source_id": "europepmc",
+      "date": "2026-02-11T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "First record",
+        "Two new species",
+        "Uroxys martinicensis"
+      ]
+    },
+    {
+      "id": "9a009ac139b4913f",
+      "title": "Two new species of Neoperla (Plecoptera: Perlidae) from Southern China ",
+      "link": "https://doi.org/10.11646/zootaxa.5757.4.7",
+      "summary": "Two new species of the genus Neoperla , N. luocheng sp. nov. and N. pianma sp. nov. are described from Guangxi Zhuang Autonomous Region and Yunnan Province, China, respectively. The new species were assigned to the Neoperla (Formosita) sinensis-g roup and Neoperla (Formosita) lushana- complex. The new species were…",
+      "source": "Zootaxa",
+      "source_id": "europepmc",
+      "date": "2026-02-09T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Two new species",
+        "Region and",
+        "Neoperla (Formosita) sinensis"
+      ]
+    },
+    {
+      "id": "f594d203be5c51c4",
+      "title": "Definition of the Ichthyurus macrurus species group (Coleoptera: Cantharidae), with description of a new species from Yunnan, China ",
+      "link": "https://doi.org/10.11646/zootaxa.5757.4.3",
+      "summary": "A specie group within the genus Ichthyurus Westwood, 1848 in the Oriental Region is proposed based on the anatomical comparison. This group is designated as the I. macrurus species group and comprises three species, including I. macrurus Gestro, 1892 (new record in China), I. major Pic, 1922 (new record in China)…",
+      "source": "Zootaxa",
+      "source_id": "europepmc",
+      "date": "2026-02-09T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Ichthyurus macrurus species"
+      ]
+    },
+    {
+      "id": "9e463c5faef5a65e",
+      "title": "Neuroterus paradecrescens , a new species of oak gall wasp from Mexico (Hymenoptera: Cynipidae: Cynipini) ",
+      "link": "https://doi.org/10.11646/zootaxa.5757.3.6",
+      "summary": "A new species of oak gall wasp, Neuroterus paradecrescens García-Martiñón & Pujade-Villar sp. nov. is described. The description is based on the asexual female generation, that induces galls on the leaves of different endemic oak species of section Quercus . Galls are very similar to Neuroterus saltatorius var…",
+      "source": "Zootaxa",
+      "source_id": "europepmc",
+      "date": "2026-02-05T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Neuroterus paradecrescens",
+        "Galls are very",
+        "Neuroterus saltatorius var"
+      ]
+    },
+    {
+      "id": "43dfbd8f361c3a4d",
+      "title": "Contribution to the genus Acromantis Saussure, 1870 (Mantodea: Hymenopodidae) from China, with description of a new species",
+      "link": "https://doi.org/10.11646/zootaxa.5757.1.2",
+      "summary": "A new species Acromantis vaorum sp. nov. , from the Yunnan province of China, is described and illustrated. The new species is characterized by black spots on the costal field and the radial vein of the forewings, a short vertical lobe of sternite five and six in males, and a large vertical process. Acromantis magna…",
+      "source": "Zootaxa",
+      "source_id": "europepmc",
+      "date": "2026-02-03T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Acromantis vaorum",
+        "Yunnan province",
+        "Acromantis magna"
+      ]
+    },
+    {
+      "id": "1c55280c8df82675",
+      "title": "A new species and a new record of the genus Bucculatrix Zeller, 1839 (Lepidoptera: Bucculatricidae) from Korea ",
+      "link": "https://doi.org/10.11646/zootaxa.5750.1.9",
+      "summary": "In the present study, a new species, Bucculatrix bipuncticosta sp. nov. is described as new to science. Also, B. comporabile Seksjaeva, 1989, is reported for the first time from Korea. The external morphology and genital structures of them are described and illustrated in detail. In addition, mitochondrial COI DNA…",
+      "source": "Zootaxa",
+      "source_id": "europepmc",
+      "date": "2026-01-19T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "In the present",
+        "Bucculatrix bipuncticosta",
+        "In addition"
+      ]
+    },
+    {
+      "id": "a1501a1962f9bc0b",
+      "title": "A remarkable new species of Eucyphonia Sakakibara, 1968 (Hemiptera: Membracidae): the hidden beauty of entomological collections ",
+      "link": "https://doi.org/10.11646/zootaxa.5750.1.7",
+      "summary": "Eucyphonia Sakakibara, 1968, originally described as Cyphonia Laporte, 1832, is characterized by its elaborated pronotum, featuring bilobed suprahumeral processes and ornate posterior process. Examination of Membracidae material housed at the Natural History Museum of Vienna revealed a remarkable new species from…",
+      "source": "Zootaxa",
+      "source_id": "europepmc",
+      "date": "2026-01-19T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Membracidae material housed",
+        "Vienna revealed"
+      ]
+    },
+    {
+      "id": "072f17195a0244a8",
+      "title": "Additions to the genus Petalocephala Stål from India (Hemiptera: Cicadellidae: Ledrinae), with description of two new species ",
+      "link": "https://doi.org/10.11646/zootaxa.5750.1.6",
+      "summary": "Two new species of the tribe Ledrini, Petalocephala dweepa Rajgopal sp. nov. (Andaman Islands: Diglipur) and Petalocephala ishanya Rajgopal sp. nov. (Arunachal Pradesh: Hunli) are described and illustrated from India. The genus Petalocephala is reported from Andaman Is. (India) for the first time in this study. New…",
+      "source": "Zootaxa",
+      "source_id": "europepmc",
+      "date": "2026-01-19T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Two new species",
+        "Petalocephala dweepa",
+        "Petalocephala ishanya"
+      ]
+    },
+    {
+      "id": "87cfc3e38587d245",
+      "title": "Revisionary notes of the genus Hypodoryctes Kokujev, 1900 (Hymenoptera, Braconidae: Doryctinae) from Vietnam, with descriptions of five new species ",
+      "link": "https://doi.org/10.11646/zootaxa.5748.4.3",
+      "summary": "Hypodoryctes Kokujev, a relatively small genus previously comprising ten species is revised. This paper includes descriptions and illustrations of five new species of Hypodoryctes from Vietnam, viz. Hypodoryctes albicyclus Long, sp. nov .; H. bicolor Long, sp. nov .; H. nebicolor Long, sp. nov .; H. netango Long, sp…",
+      "source": "Zootaxa",
+      "source_id": "europepmc",
+      "date": "2026-01-15T00:00:00+00:00",
+      "score": 70,
+      "rare": true,
+      "species": [
+        "Revisionary notes",
+        "Hypodoryctes from",
+        "Hypodoryctes albicyclus"
+      ]
+    },
+    {
+      "id": "f95a871e188d5a2e",
+      "title": "Novel grazing strategies increase milkweed (Asclepias spp.) availability and monarch (Danaus plexippus) abundance in rangelands",
+      "link": "https://www.frontiersin.org/articles/10.3389/fevo.2026.1914674",
+      "summary": "IntroductionMonarch butterfly (Danaus plexippus) populations are declining, emphasizing the need for conservation throughout their range. An understudied and underutilized area for conservation includes rangelands managed with livestock grazing. Although this region is on the edge of the eastern monarch population…",
+      "source": "Frontiers in Ecology and Evolution",
+      "source_id": "frontiers-eco",
+      "date": null,
+      "score": 25,
+      "rare": false,
+      "species": [
+        "Novel grazing strategies",
+        "Asclepias spp",
+        "Danaus plexippus"
       ]
     }
   ]
