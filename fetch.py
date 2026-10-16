@@ -5,6 +5,10 @@ A single feed that fails (PubMed often answers with an HTML block page) is
 recorded and skipped. If the run collects no articles at all, the existing
 data/articles.json is left untouched and the process exits 0 so a scheduled
 build keeps the last good ledger.
+
+Successful runs merge into that ledger instead of replacing it. Europe PMC
+supplies older new-species and cryptic-insect papers so the archive still
+reaches back to April 2026 after the cap is applied.
 """
 
 from __future__ import annotations
@@ -17,6 +21,7 @@ import ssl
 import sys
 import time
 import urllib.error
+import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
@@ -25,8 +30,33 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 OUT = ROOT / "data" / "articles.json"
-USER_AGENT = "RarissimaBot/1.0 (+local research aggregator; respectful fetch)"
+USER_AGENT = "RarissimaBot/1.0 (+https://github.com/btzona/rarissima)"
 TIMEOUT = 20
+# Daily refresh merges into the file. The cap keeps the page bounded while
+# reserving room for papers dated on or before April 2026.
+HISTORY_CAP = 180
+HISTORY_FLOOR = datetime(2026, 4, 30, tzinfo=timezone.utc)
+ARCHIVE_ORDERS = (
+    "Coleoptera OR Lepidoptera OR Hymenoptera OR Diptera OR Hemiptera "
+    "OR Orthoptera OR Odonata OR Trichoptera OR Neuroptera OR Blattodea "
+    "OR Mantodea OR Phasmida OR Insecta"
+)
+DOI_RE = re.compile(r"(10\.\d{4,9}/[^\s\"<>]+)", re.I)
+ORDER_IN_TITLE_RE = re.compile(
+    r"\((?:[^)]*\b)?(?:Coleoptera|Lepidoptera|Hymenoptera|Diptera|Hemiptera|"
+    r"Orthoptera|Odonata|Trichoptera|Neuroptera|Blattodea|Mantodea|Phasmida|"
+    r"Insecta|Strepsiptera|Mecoptera|Psocodea|Thysanoptera|Plecoptera|"
+    r"Ephemeroptera|Dermaptera|Zygentoma|Phasmatodea)\b",
+    re.I,
+)
+# Archive queries match these words in abstracts too. A fungus or mite paper
+# that only mentions an insect host is not part of the ledger.
+NON_INSECT_SUBJECT_RE = re.compile(
+    r"\b(fungi|fungus|fungal|acari|mite|mites|arachnid|spider|spiders|"
+    r"nematode|nematodes|microsporid\w*|yeast|yeasts|bacterium|bacteria|bacterial|"
+    r"oomycete)\b",
+    re.I,
+)
 
 FEEDS = [
     {
@@ -614,23 +644,308 @@ def fetch_pubmed_items(limit: int = 20) -> tuple[list[dict], str | None]:
     return items, None
 
 
-def write_ledger(payload: dict) -> None:
-    OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+def extract_doi(text: str) -> str | None:
+    if not text:
+        return None
+    match = DOI_RE.search(text)
+    if not match:
+        return None
+    return match.group(1).rstrip(".,);]").lower()
 
 
-def previous_article_count() -> int:
-    """How many articles are already in data/articles.json, or 0 if unusable."""
+def title_key(title: str) -> str:
+    text = strip_html(title).lower().replace("’", "'")
+    text = re.sub(r"[^a-z0-9]+", " ", text)
+    return " ".join(text.split())
+
+
+def canonical_keys(article: dict) -> list[str]:
+    keys: list[str] = []
+    doi = extract_doi(article.get("link") or "")
+    if doi:
+        keys.append("doi:" + doi)
+    title = title_key(article.get("title") or "")
+    if len(title) >= 12:
+        keys.append("title:" + title)
+    if not keys:
+        keys.append("id:" + (article.get("id") or article.get("link") or ""))
+    return keys
+
+
+def article_timestamp(article: dict) -> float:
+    raw = article.get("date") or ""
+    try:
+        return datetime.fromisoformat(raw).timestamp()
+    except ValueError:
+        return 0.0
+
+
+def history_sort_key(article: dict) -> tuple:
+    return (
+        -article_timestamp(article),
+        0 if article.get("rare") else 1,
+        -(article.get("score") or 0),
+    )
+
+
+def publication_date(raw: str) -> str | None:
+    raw = (raw or "").strip()
+    if re.fullmatch(r"\d{4}-\d{2}-\d{2}", raw):
+        return f"{raw}T00:00:00+00:00"
+    if re.fullmatch(r"\d{4}-\d{2}", raw):
+        return f"{raw}-01T00:00:00+00:00"
+    if re.fullmatch(r"\d{4}", raw):
+        return f"{raw}-01-01T00:00:00+00:00"
+    return parse_date(raw)
+
+
+def prefer_article(old: dict, new: dict) -> dict:
+    """Keep the fuller record when the same paper arrives from two sources."""
+    chosen = dict(old)
+    if len(new.get("summary") or "") > len(old.get("summary") or ""):
+        chosen["summary"] = new.get("summary") or ""
+    if new.get("date") and not old.get("date"):
+        chosen["date"] = new["date"]
+    if new.get("rare") or old.get("rare"):
+        chosen["rare"] = True
+    chosen["score"] = max(int(old.get("score") or 0), int(new.get("score") or 0))
+    new_doi = extract_doi(new.get("link") or "")
+    old_doi = extract_doi(old.get("link") or "")
+    if new_doi and not old_doi:
+        chosen["link"] = f"https://doi.org/{new_doi}"
+        chosen["id"] = article_id(chosen["link"], chosen.get("title") or "")
+    if not chosen.get("species") and new.get("species"):
+        chosen["species"] = new["species"]
+    if (new.get("source") or "") and (old.get("source") in {None, "", "Europe PMC"}):
+        chosen["source"] = new["source"]
+        chosen["source_id"] = new.get("source_id") or chosen.get("source_id")
+    return chosen
+
+
+def load_previous_articles() -> list[dict]:
     if not OUT.exists():
-        return 0
+        return []
     try:
         previous = json.loads(OUT.read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError):
-        return 0
+        return []
     articles = previous.get("articles") if isinstance(previous, dict) else None
-    if isinstance(articles, list) and articles:
-        return len(articles)
-    return 0
+    if not isinstance(articles, list):
+        return []
+    return [item for item in articles if isinstance(item, dict)]
+
+
+def merge_articles(previous: list[dict], fresh: list[dict]) -> list[dict]:
+    records: list[dict] = []
+    index: dict[str, int] = {}
+
+    def add(article: dict) -> None:
+        keys = canonical_keys(article)
+        found = next((index[key] for key in keys if key in index), None)
+        if found is None:
+            records.append(dict(article))
+            found = len(records) - 1
+        else:
+            records[found] = prefer_article(records[found], article)
+        for key in keys:
+            index[key] = found
+
+    for article in list(previous) + list(fresh):
+        if (article.get("title") or "").strip() and str(article.get("link") or "").startswith("http"):
+            add(article)
+    return records
+
+
+def journal_name(rec: dict) -> str:
+    info = rec.get("journalInfo") or {}
+    journal = info.get("journal") if isinstance(info, dict) else None
+    name = ""
+    if isinstance(journal, dict):
+        name = journal.get("title") or journal.get("medlineAbbreviation") or ""
+    name = strip_html(str(name)).strip()
+    return name or "Europe PMC"
+
+
+MICROBE_JOURNAL_RE = re.compile(r"microbiol|mycolog|mycobiol|parasitolog|fungal biology", re.I)
+
+
+def archive_is_insect(article: dict) -> bool:
+    """Europe PMC hits must describe an insect, not a microbe or mite that uses one as a host."""
+    if article.get("source_id") != "europepmc":
+        return True
+    title = article.get("title") or ""
+    if re.search(r"fungus beetles?", title, re.I):
+        return True
+    if NON_INSECT_SUBJECT_RE.search(title):
+        return False
+    # A microbiology or mycology journal is in range only when the title's
+    # taxon is itself an insect order, not a yeast or bacterium cultured from one.
+    if MICROBE_JOURNAL_RE.search(article.get("source") or "") and not ORDER_IN_TITLE_RE.search(title):
+        return False
+    if ORDER_IN_TITLE_RE.search(title) or any(pattern.search(title) for pattern in INSECT_RE):
+        return True
+    blob = f"{title} {article.get('summary') or ''}"
+    return any(pattern.search(blob) for pattern in INSECT_RE)
+
+
+def cap_history(items: list[dict]) -> list[dict]:
+    """Bound the ledger without letting the shelf stop short of April 2026."""
+    items = [
+        item
+        for item in items
+        if str(item.get("link") or "").startswith("http") and archive_is_insect(item)
+    ]
+    items.sort(key=history_sort_key)
+    if len(items) <= HISTORY_CAP:
+        return items
+    floor_ts = HISTORY_FLOOR.timestamp()
+    early = [item for item in items if 0 < article_timestamp(item) <= floor_ts]
+    early_keep = early[:36]
+    kept = {id(item) for item in early_keep}
+    rest = [item for item in items if id(item) not in kept]
+    selected = early_keep + rest[: max(0, HISTORY_CAP - len(early_keep))]
+    selected.sort(key=history_sort_key)
+    return selected
+
+
+def archive_month_spans() -> list[tuple[str, str]]:
+    spans: list[tuple[str, str]] = []
+    for month in range(1, 10):
+        start = f"2026-{month:02d}-01"
+        if month == 2:
+            end = "2026-02-28"
+        elif month in {4, 6, 9}:
+            end = f"2026-{month:02d}-30"
+        else:
+            end = f"2026-{month:02d}-31"
+        spans.append((start, end))
+    spans.append(("2026-10-01", "2026-10-16"))
+    return spans
+
+
+def europepmc_record(rec: dict) -> dict | None:
+    title = strip_html(rec.get("title") or "").strip().rstrip(".")
+    if len(title) < 12:
+        return None
+    doi = extract_doi(rec.get("doi") or "")
+    pmid = str(rec.get("pmid") or "").strip()
+    if doi:
+        link = f"https://doi.org/{doi}"
+    elif pmid:
+        link = f"https://europepmc.org/article/MED/{pmid}"
+    else:
+        return None
+    summary = truncate(strip_html(rec.get("abstractText") or ""), 320)
+    journal = journal_name(rec)
+    if not summary:
+        summary = journal
+    date_iso = publication_date(rec.get("firstPublicationDate") or rec.get("pubYear") or "")
+    score, is_rare, is_ento = score_item(title, summary, "europepmc", "high")
+    blob = f"{title} {summary}".lower()
+    if "new species" in blob or "sp. nov" in blob or "new genus" in blob:
+        is_rare = True
+        is_ento = True
+    if not is_ento and not is_rare:
+        return None
+    return {
+        "id": article_id(link, title),
+        "title": title,
+        "link": link,
+        "summary": summary,
+        "source": journal[:72],
+        "source_id": "europepmc",
+        "date": date_iso,
+        "score": max(score, 50 if is_rare else score),
+        "rare": is_rare,
+        "species": detect_species(f"{title} {summary}"),
+    }
+
+
+def europepmc_search(query: str, page_size: int = 15) -> tuple[list[dict], str | None]:
+    url = "https://www.ebi.ac.uk/europepmc/webservices/rest/search?" + urllib.parse.urlencode(
+        {
+            "query": query,
+            "format": "json",
+            "pageSize": str(page_size),
+            "resultType": "core",
+            "sort": "P_PDATE_D desc",
+        }
+    )
+    raw, err = fetch_url(url)
+    if err or not raw:
+        return [], err or "empty Europe PMC response"
+    head = raw[:160].lstrip().lower()
+    if head.startswith(b"<!doctype") or head.startswith(b"<html"):
+        return [], "Europe PMC returned HTML"
+    try:
+        payload = json.loads(raw.decode("utf-8"))
+    except (UnicodeDecodeError, json.JSONDecodeError) as exc:
+        return [], f"Europe PMC parse: {exc}"
+    results = (payload.get("resultList") or {}).get("result") or []
+    if isinstance(results, dict):
+        results = [results]
+    articles: list[dict] = []
+    for rec in results:
+        if not isinstance(rec, dict):
+            continue
+        article = europepmc_record(rec)
+        if article:
+            articles.append(article)
+    return articles, None
+
+
+def fetch_europepmc_archive() -> tuple[list[dict], str | None]:
+    """Older new-species and cryptic insect papers, one slice per month."""
+    found: list[dict] = []
+    seen: set[str] = set()
+    errors: list[str] = []
+    orders = ARCHIVE_ORDERS
+    for start, end in archive_month_spans():
+        query = (
+            f'TITLE:"new species" AND ({orders}) '
+            f"AND FIRST_PDATE:[{start} TO {end}]"
+        )
+        batch, err = europepmc_search(query, page_size=12)
+        label = start[:7]
+        if err:
+            errors.append(f"{label}: {err}")
+            print(f"  FAIL {label}: {err}")
+            continue
+        added = 0
+        for article in batch:
+            if article["link"] in seen:
+                continue
+            seen.add(article["link"])
+            found.append(article)
+            added += 1
+        print(f"  {label}: {added} kept")
+        time.sleep(0.2)
+
+    broad = (
+        f'(TITLE:cryptic OR TITLE:undescribed OR TITLE:rediscovered OR TITLE:"new genus" '
+        f'OR TITLE:"sp. nov") AND ({orders}) '
+        f"AND FIRST_PDATE:[2026-01-01 TO 2026-10-16]"
+    )
+    batch, err = europepmc_search(broad, page_size=25)
+    if err:
+        errors.append(f"broader: {err}")
+        print(f"  FAIL broader query: {err}")
+    else:
+        added = 0
+        for article in batch:
+            if article["link"] in seen:
+                continue
+            seen.add(article["link"])
+            found.append(article)
+            added += 1
+        print(f"  broader taxonomic query: {added} kept")
+    warning = "; ".join(errors[:4]) if errors else None
+    return found, warning
+
+
+def write_ledger(payload: dict) -> None:
+    OUT.parent.mkdir(parents=True, exist_ok=True)
+    OUT.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
 
 def main() -> int:
@@ -734,63 +1049,68 @@ def main() -> int:
         feed_status.append({"id": "pubmed", "name": "PubMed", "ok": True, "items": kept})
         print(f"  OK: {kept} PubMed items")
 
-    # Prefer rare matches; always top up with specialty/recent entomology so page is never sparse
-    rare_items = [a for a in collected if a["rare"]]
-    fallback = [a for a in collected if not a["rare"]]
+    print("Fetching Europe PMC archive …", flush=True)
+    archive_items, archive_err = fetch_europepmc_archive()
+    if archive_err and not archive_items:
+        feed_status.append({"id": "europepmc", "name": "Europe PMC", "ok": False, "error": archive_err})
+        print(f"  FAIL: {archive_err}")
+    else:
+        added = 0
+        for article in archive_items:
+            link = article["link"]
+            if link in seen_links:
+                continue
+            collected.append(article)
+            seen_links.add(link)
+            added += 1
+        status: dict = {"id": "europepmc", "name": "Europe PMC", "ok": True, "items": added}
+        if archive_err:
+            status["warning"] = archive_err
+        feed_status.append(status)
+        print(f"  OK: {added} archive items")
 
-    def sort_key(a):
-        ts = 0.0
-        if a.get("date"):
-            try:
-                ts = datetime.fromisoformat(a["date"]).timestamp()
-            except ValueError:
-                ts = 0.0
-        return (-ts, -a["score"])
+    previous = load_previous_articles()
+    ok = sum(1 for feed in feed_status if feed.get("ok"))
+    fail = sum(1 for feed in feed_status if not feed.get("ok"))
+    print(f"Feeds OK: {ok}  Failed: {fail}")
 
-    rare_items.sort(key=sort_key)
-    fallback.sort(key=sort_key)
+    # Every source failed. Leave the last good ledger on disk.
+    if not collected:
+        if previous:
+            print(f"No articles collected. Keeping last good {OUT} ({len(previous)} articles).")
+            return 0
+        now = datetime.now(timezone.utc).isoformat()
+        write_ledger(
+            {
+                "site": "Rarissima",
+                "subtitle": "A ledger of obscure, rare, and newly illuminated insect research",
+                "updated": now,
+                "article_count": 0,
+                "rare_count": 0,
+                "feeds": feed_status,
+                "articles": [],
+            }
+        )
+        print(f"No articles collected and no previous ledger. Wrote empty {OUT}.")
+        return 0
 
-    selected = rare_items[:28]
-    # Always add solid entomology research context from specialty feeds
-    need = max(16, 36 - len(selected))
-    for a in fallback:
-        if len(selected) >= 36:
-            break
-        selected.append(a)
-        need -= 1
-        if need <= 0 and len(selected) >= 24:
-            break
-    selected = selected[:40]
-    selected.sort(key=lambda a: (0 if a["rare"] else 1, sort_key(a)[0], sort_key(a)[1]))
-
+    selected = cap_history(merge_articles(previous, collected))
     now = datetime.now(timezone.utc).isoformat()
+    dated = [article["date"] for article in selected if article.get("date")]
     payload = {
         "site": "Rarissima",
         "subtitle": "A ledger of obscure, rare, and newly illuminated insect research",
         "updated": now,
         "article_count": len(selected),
-        "rare_count": sum(1 for a in selected if a["rare"]),
+        "rare_count": sum(1 for article in selected if article.get("rare")),
         "feeds": feed_status,
         "articles": selected,
     }
-    ok = sum(1 for f in feed_status if f.get("ok"))
-    fail = sum(1 for f in feed_status if not f.get("ok"))
-    print(f"Feeds OK: {ok}  Failed: {fail}")
-
-    # Every feed failed, or nothing matched. Do not replace a good ledger
-    # with an empty one, and do not fail the caller — Pages should keep
-    # publishing the last successful snapshot.
-    if not selected:
-        kept = previous_article_count()
-        if kept:
-            print(f"No articles collected. Keeping last good {OUT} ({kept} articles).")
-            return 0
-        write_ledger(payload)
-        print(f"No articles collected and no previous ledger. Wrote empty {OUT}.")
-        return 0
-
     write_ledger(payload)
-    print(f"\nWrote {len(selected)} articles ({payload['rare_count']} rare-tagged) → {OUT}")
+    span = f"{min(dated)[:10]} → {max(dated)[:10]}" if dated else "undated"
+    print(
+        f"\nWrote {len(selected)} articles ({payload['rare_count']} rare-tagged, {span}) → {OUT}"
+    )
     return 0
 
 
