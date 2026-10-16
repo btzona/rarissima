@@ -1,0 +1,581 @@
+{
+  "site": "Rarissima",
+  "subtitle": "A ledger of obscure, rare, and newly illuminated insect research",
+  "updated": "2026-09-26T18:13:40.484365+00:00",
+  "article_count": 36,
+  "rare_count": 13,
+  "feeds": [
+    {
+      "id": "nature-entomology",
+      "name": "Nature (Entomology)",
+      "ok": true,
+      "items": 30
+    },
+    {
+      "id": "entomology-today",
+      "name": "Entomology Today (ESA)",
+      "ok": true,
+      "items": 10
+    },
+    {
+      "id": "wiley-sysent",
+      "name": "Systematic Entomology",
+      "ok": true,
+      "items": 11
+    },
+    {
+      "id": "sciencedaily-zoology",
+      "name": "ScienceDaily Zoology",
+      "ok": true,
+      "items": 11
+    },
+    {
+      "id": "sciencedaily-animals",
+      "name": "ScienceDaily Animals",
+      "ok": true,
+      "items": 2
+    },
+    {
+      "id": "sciencedaily-ecology",
+      "name": "ScienceDaily Ecology",
+      "ok": true,
+      "items": 2
+    },
+    {
+      "id": "phys-plants-animals",
+      "name": "Phys.org Plants & Animals",
+      "ok": true,
+      "items": 2
+    },
+    {
+      "id": "phys-ecology",
+      "name": "Phys.org Ecology",
+      "ok": true,
+      "items": 2
+    },
+    {
+      "id": "frontiers-eco",
+      "name": "Frontiers in Ecology and Evolution",
+      "ok": true,
+      "items": 0
+    },
+    {
+      "id": "pubmed",
+      "name": "PubMed",
+      "ok": false,
+      "error": "PubMed eutils blocked or returned HTML (IP rate limit)"
+    }
+  ],
+  "articles": [
+    {
+      "id": "b9fb90506b2284b0",
+      "title": "Yahganona nom. nov., a replacement name for the South American moth genus Ona Sihvonen, Hausmann & Brehm (Lepidoptera: Apoprogonidae)",
+      "link": "https://resjournals.onlinelibrary.wiley.com/doi/10.1111/syen.70070?af=R",
+      "summary": "Systematic Entomology, Volume 51, Issue 3, July‐September 2026.",
+      "source": "Systematic Entomology",
+      "source_id": "wiley-sysent",
+      "date": "2026-09-22T06:29:28+00:00",
+      "score": 90,
+      "rare": true,
+      "species": [
+        "Yahganona nom",
+        "American moth genus"
+      ]
+    },
+    {
+      "id": "280fd53e6ba29cbe",
+      "title": "Phylogenomics of Derbidae (Hemiptera: Fulgoromorpha) and implications for the higher classification and evolutionary history of the family",
+      "link": "https://resjournals.onlinelibrary.wiley.com/doi/10.1111/syen.70068?af=R",
+      "summary": "Systematic Entomology, Volume 51, Issue 3, July‐September 2026.",
+      "source": "Systematic Entomology",
+      "source_id": "wiley-sysent",
+      "date": "2026-09-15T13:32:12+00:00",
+      "score": 90,
+      "rare": true,
+      "species": []
+    },
+    {
+      "id": "fe54435423f7c2e6",
+      "title": "New insights into the tribal‐level phylogeny and historical biogeography of Iassinae (Hemiptera: Cicadellidae) revealed by phylogenomics",
+      "link": "https://resjournals.onlinelibrary.wiley.com/doi/10.1111/syen.70067?af=R",
+      "summary": "Systematic Entomology, Volume 51, Issue 3, July‐September 2026.",
+      "source": "Systematic Entomology",
+      "source_id": "wiley-sysent",
+      "date": "2026-08-31T10:34:25+00:00",
+      "score": 90,
+      "rare": true,
+      "species": [
+        "New insights into"
+      ]
+    },
+    {
+      "id": "bd9f968c6fde9a45",
+      "title": "324-million-year-old fossil reveals how insects conquered land",
+      "link": "https://www.sciencedaily.com/releases/2026/08/260827010455.htm",
+      "summary": "Ancient fossils suggest insects conquered land through a long amphibious phase rather than making an abrupt jump from water to dry ground. A newly identified 324-million-year-old species still carried paddle-like abdominal limbs, revealing an evolutionary bridge between aquatic ancestors and modern six-legged insects.",
+      "source": "ScienceDaily Zoology",
+      "source_id": "sciencedaily-zoology",
+      "date": "2026-08-27T07:22:34+00:00",
+      "score": 65,
+      "rare": true,
+      "species": [
+        "Ancient fossils suggest"
+      ]
+    },
+    {
+      "id": "a0d4b7805a42b44a",
+      "title": "Bee pathogen sharing and prevalence are linked with flower sharing and taxonomic distance within the bee community",
+      "link": "https://www.nature.com/articles/s42003-026-10755-2",
+      "summary": "",
+      "source": "Nature (Entomology)",
+      "source_id": "nature-entomology",
+      "date": "2026-08-08T00:00:00+00:00",
+      "score": 90,
+      "rare": true,
+      "species": [
+        "Bee pathogen sharing"
+      ]
+    },
+    {
+      "id": "823b8c3be7cb5f00",
+      "title": "Evolution and biogeography of the widespread dragonfly genus Orthetrum (Odonata: Anisoptera: Libellulidae): Massive dispersal in the tertiary",
+      "link": "https://resjournals.onlinelibrary.wiley.com/doi/10.1111/syen.70066?af=R",
+      "summary": "Systematic Entomology, Volume 51, Issue 3, July‐September 2026.",
+      "source": "Systematic Entomology",
+      "source_id": "wiley-sysent",
+      "date": "2026-07-31T10:43:00+00:00",
+      "score": 90,
+      "rare": true,
+      "species": [
+        "Evolution and biogeography",
+        "Massive dispersal"
+      ]
+    },
+    {
+      "id": "ed6e3848e1e4aa7c",
+      "title": "The evolutionary history of praying mantises (Dictyoptera, Mantodea)",
+      "link": "https://resjournals.onlinelibrary.wiley.com/doi/10.1111/syen.70065?af=R",
+      "summary": "Systematic Entomology, Volume 51, Issue 3, July‐September 2026.",
+      "source": "Systematic Entomology",
+      "source_id": "wiley-sysent",
+      "date": "2026-07-22T05:24:35+00:00",
+      "score": 90,
+      "rare": true,
+      "species": []
+    },
+    {
+      "id": "0fe74e43d4ce1021",
+      "title": "Evolution of the false‐leaf katydids (Orthoptera: Tettigoniidae: Phaneropterinae): Molecular phylogeny and divergence times",
+      "link": "https://resjournals.onlinelibrary.wiley.com/doi/10.1111/syen.70064?af=R",
+      "summary": "Systematic Entomology, Volume 51, Issue 3, July‐September 2026.",
+      "source": "Systematic Entomology",
+      "source_id": "wiley-sysent",
+      "date": "2026-07-13T03:35:07+00:00",
+      "score": 90,
+      "rare": true,
+      "species": [
+        "Molecular phylogeny and"
+      ]
+    },
+    {
+      "id": "5ae7f0372cf9a979",
+      "title": "Phylogeny‐based generic delimitations of the diverse leafhopper tribe Gyponini, including the establishment of a new tribe of Iassinae (Hemiptera: Cicadellidae)",
+      "link": "https://resjournals.onlinelibrary.wiley.com/doi/10.1111/syen.70062?af=R",
+      "summary": "Systematic Entomology, Volume 51, Issue 3, July‐September 2026.",
+      "source": "Systematic Entomology",
+      "source_id": "wiley-sysent",
+      "date": "2026-07-06T06:01:53+00:00",
+      "score": 90,
+      "rare": true,
+      "species": []
+    },
+    {
+      "id": "5b73ddb5c0108cdb",
+      "title": "Unearthing Mesozoic beetles through micro‐computed tomography: A new family of Archostemata and the first representatives of Ommatidae and †Notocupes from the Crato Formation",
+      "link": "https://resjournals.onlinelibrary.wiley.com/doi/10.1111/syen.70061?af=R",
+      "summary": "Systematic Entomology, Volume 51, Issue 3, July‐September 2026.",
+      "source": "Systematic Entomology",
+      "source_id": "wiley-sysent",
+      "date": "2026-07-03T06:24:32+00:00",
+      "score": 90,
+      "rare": true,
+      "species": [
+        "Mesozoic beetles through",
+        "Archostemata and the",
+        "Ommatidae and"
+      ]
+    },
+    {
+      "id": "d8cc65ae678b6c50",
+      "title": "Little devils of Neotropical forests: A first molecular phylogeny of stygnid harvestmen with UCE‐museomics and a gigamatrix approach (Arachnida, Opiliones, Stygnidae)",
+      "link": "https://resjournals.onlinelibrary.wiley.com/doi/10.1111/syen.70060?af=R",
+      "summary": "Systematic Entomology, Volume 51, Issue 3, July‐September 2026.",
+      "source": "Systematic Entomology",
+      "source_id": "wiley-sysent",
+      "date": "2026-07-02T05:11:38+00:00",
+      "score": 90,
+      "rare": true,
+      "species": [
+        "Little devils",
+        "Neotropical forests"
+      ]
+    },
+    {
+      "id": "826a8892fecbd718",
+      "title": "Issue Information",
+      "link": "https://resjournals.onlinelibrary.wiley.com/doi/10.1111/syen.70053?af=R",
+      "summary": "Systematic Entomology, Volume 51, Issue 3, July‐September 2026.",
+      "source": "Systematic Entomology",
+      "source_id": "wiley-sysent",
+      "date": "2026-07-01T16:52:42+00:00",
+      "score": 90,
+      "rare": true,
+      "species": []
+    },
+    {
+      "id": "25257f726af5c1b0",
+      "title": "Long‐branch attraction and incomplete lineage sorting explain the unstable high‐level position of eriophyoid mites in the arachnid tree of life",
+      "link": "https://resjournals.onlinelibrary.wiley.com/doi/10.1111/syen.70063?af=R",
+      "summary": "Systematic Entomology, Volume 51, Issue 3, July‐September 2026.",
+      "source": "Systematic Entomology",
+      "source_id": "wiley-sysent",
+      "date": "2026-07-01T07:00:00+00:00",
+      "score": 90,
+      "rare": true,
+      "species": []
+    },
+    {
+      "id": "01607fec4dc2cc27",
+      "title": "Crop protection: A new method for understanding insect sexual communication",
+      "link": "https://phys.org/news/2026-09-crop-method-insect-sexual-communication.html",
+      "summary": "A team of INRAE scientists, in collaboration with Université Côte d'Azur and Nanjing Agricultural University in China, has used an innovative AI-based method to identify the sex pheromone of the lily moth1 and the olfactory receptors associated with it. The insect pest, whose caterpillars feed on these plants, is…",
+      "source": "Phys.org Plants & Animals",
+      "source_id": "phys-plants-animals",
+      "date": "2026-09-26T15:00:01+00:00",
+      "score": 25,
+      "rare": false,
+      "species": [
+        "Crop protection",
+        "Azur and"
+      ]
+    },
+    {
+      "id": "4f9f111b192e3ebb",
+      "title": "Plant root injuries unleash pressure waves that travel long distances",
+      "link": "https://phys.org/news/2026-09-root-injuries-unleash-pressure-distances.html",
+      "summary": "When plant roots are injured—by insects, for example—the pressure inside the root drops, and a pressure wave spreads rapidly throughout the root system. In neighboring roots, tiny proteins that act as mechanical pressure sensors detect the change and generate electrical and calcium signals.",
+      "source": "Phys.org Plants & Animals",
+      "source_id": "phys-plants-animals",
+      "date": "2026-09-25T18:00:18+00:00",
+      "score": 25,
+      "rare": false,
+      "species": [
+        "Plant root injuries",
+        "When plant roots",
+        "In neighboring roots"
+      ]
+    },
+    {
+      "id": "dcec8665ca6027a6",
+      "title": "How One Entomologist is Collaborating With Software Engineers to Improve Farming",
+      "link": "https://entomologytoday.org/2026/09/25/entomologist-collaborating-software-engineers-improve-farming-clay-morrow-standout-early-career-professional/",
+      "summary": "Meet Clay Morrow, Ph.D., postdoctoral researcher at Cornell, expert in plant-insect interactions and cross-disciplinary innovation, and subject of the next installment of our &#8220;Standout Early Career Professionals&#8221; series. \" data-image-caption=\" Meet Clay Morrow, Ph.D., postdoctoral researcher at Cornell…",
+      "source": "Entomology Today (ESA)",
+      "source_id": "entomology-today",
+      "date": "2026-09-25T15:30:42+00:00",
+      "score": 50,
+      "rare": false,
+      "species": []
+    },
+    {
+      "id": "246666f51305bec6",
+      "title": "Machine learning helps identify chemicals that repel honey bees from pesticides",
+      "link": "https://phys.org/news/2026-09-machine-chemicals-repel-honey-bees.html",
+      "summary": "In a win for pollinator conservation, researchers at the University of California, Riverside, have developed a machine learning-based method to identify chemical compounds that can safely repel honey bees from pesticide-treated crops. The research offers a potential solution to one of agriculture's most urgent…",
+      "source": "Phys.org Ecology",
+      "source_id": "phys-ecology",
+      "date": "2026-09-24T19:30:01+00:00",
+      "score": 25,
+      "rare": false,
+      "species": [
+        "Machine learning helps"
+      ]
+    },
+    {
+      "id": "ff1553c65625cf00",
+      "title": "Study reveals how biological echo chambers form—and what can break them",
+      "link": "https://phys.org/news/2026-09-reveals-biological-echo-chambers.html",
+      "summary": "Tropical army ants are known to form devastating armadas that march through forests eating other insects and small creatures. As they march, they deposit chemical trails of pheromones that others behind them sense and follow. But occasionally one of these ants will walk in a circle, prompting a subset of ants behind…",
+      "source": "Phys.org Ecology",
+      "source_id": "phys-ecology",
+      "date": "2026-09-23T19:20:01+00:00",
+      "score": 25,
+      "rare": false,
+      "species": [
+        "Study reveals how",
+        "Tropical army ants",
+        "As they march"
+      ]
+    },
+    {
+      "id": "3fa71bb246bcbaf3",
+      "title": "EpOME functionally antagonises prostaglandin signalling in Spodoptera exigua via a specific GPCR conserved across metazoans",
+      "link": "https://www.nature.com/articles/s41467-026-77858-6",
+      "summary": "",
+      "source": "Nature (Entomology)",
+      "source_id": "nature-entomology",
+      "date": "2026-09-22T00:00:00+00:00",
+      "score": 25,
+      "rare": false,
+      "species": [
+        "Spodoptera exigua via"
+      ]
+    },
+    {
+      "id": "017332666952b25a",
+      "title": "Scientists Report Continuing Harms to U.S. Science in Second-Year Survey",
+      "link": "https://entomologytoday.org/2026/09/21/scientists-report-continuing-harms-to-u-s-science-in-second-year-survey/",
+      "summary": "For a second year, a survey of nearly 1,000 scientists across a variety of life sciences details how federal government policies have created ongoing disruptions to American research and to the scientific workforce. Four out of five say federal policies since 2025 have caused an &#8220;extremely negative…",
+      "source": "Entomology Today (ESA)",
+      "source_id": "entomology-today",
+      "date": "2026-09-21T17:30:01+00:00",
+      "score": 25,
+      "rare": false,
+      "species": [
+        "American research and",
+        "Four out"
+      ]
+    },
+    {
+      "id": "7dc01e9ca91ba9ea",
+      "title": "Citizen science reveals temporally structured insect attraction and mitigation efficacy under artificial light at night",
+      "link": "https://www.nature.com/articles/s42003-026-10979-2",
+      "summary": "",
+      "source": "Nature (Entomology)",
+      "source_id": "nature-entomology",
+      "date": "2026-09-21T00:00:00+00:00",
+      "score": 50,
+      "rare": false,
+      "species": [
+        "Citizen science reveals"
+      ]
+    },
+    {
+      "id": "c7f8c66e83bee384",
+      "title": "Arthropods Lag Far Behind Other Animals in Conservation Assessment and Protection, Study Shows",
+      "link": "https://entomologytoday.org/2026/09/18/arthropods-lag-behind-other-animals-in-conservation-assessment-protection/",
+      "summary": "Most U.S. insects and arachnids remain unassessed for conservation risk, and even many known at-risk species lack legal protection. A study quantifying this lag in arthropod conservation reveals a major blind spot in efforts to save vulnerable wildlife. Euphydryas editha taylori (left) is a critically imperiled…",
+      "source": "Entomology Today (ESA)",
+      "source_id": "entomology-today",
+      "date": "2026-09-18T13:00:24+00:00",
+      "score": 50,
+      "rare": false,
+      "species": [
+        "Assessment and",
+        "Euphydryas editha taylori"
+      ]
+    },
+    {
+      "id": "5413e082d242c27d",
+      "title": "Retraction Note: Reactive oxygen species-producing genes regulate mosquito midgut bacteria colonization, transcriptomic changes and cell repair",
+      "link": "https://www.nature.com/articles/s42003-026-10611-3",
+      "summary": "",
+      "source": "Nature (Entomology)",
+      "source_id": "nature-entomology",
+      "date": "2026-09-17T00:00:00+00:00",
+      "score": 25,
+      "rare": false,
+      "species": [
+        "Reactive oxygen species"
+      ]
+    },
+    {
+      "id": "3ada1eaccc39e10d",
+      "title": "The gut microbiome of Haemaphysalis longicornis mediates detoxification of the plant-derived insecticide Cinnamaldehyde",
+      "link": "https://www.nature.com/articles/s42003-026-10954-x",
+      "summary": "",
+      "source": "Nature (Entomology)",
+      "source_id": "nature-entomology",
+      "date": "2026-09-14T00:00:00+00:00",
+      "score": 25,
+      "rare": false,
+      "species": [
+        "Haemaphysalis longicornis mediates"
+      ]
+    },
+    {
+      "id": "371e00a9f293d7ce",
+      "title": "Wasps are disappearing this summer, and scientists are worried",
+      "link": "https://www.sciencedaily.com/releases/2026/09/260911003901.htm",
+      "summary": "Britain’s wasps have become mysteriously scarce this summer, and scientists suspect an unusual combination of temperature swings, heatwaves, and food shortages may be responsible. Even the wasps that remain appear unusually small, potentially offering a glimpse of how extreme heat could reshape insect populations.",
+      "source": "ScienceDaily Zoology",
+      "source_id": "sciencedaily-zoology",
+      "date": "2026-09-11T11:38:35+00:00",
+      "score": 25,
+      "rare": false,
+      "species": [
+        "Wasps are disappearing",
+        "Even the wasps"
+      ]
+    },
+    {
+      "id": "01cc5f7c1acfb4de",
+      "title": "Neurodiversity in Entomology: Finding Ourselves Among the Creepy-Crawlies",
+      "link": "https://entomologytoday.org/2026/09/09/neurodiversity-entomology-finding-ourselves-among-creepy-crawlies/",
+      "summary": "A growing number of neurodivergent scientists are drawn to entomology, but many face barriers in education and research. Esme Chiara, a master&#8217;s student in entomology at North Carolina State University, agues that better support and inclusion could unlock talent, strengthen science, and broaden perspectives in…",
+      "source": "Entomology Today (ESA)",
+      "source_id": "entomology-today",
+      "date": "2026-09-09T13:15:34+00:00",
+      "score": 50,
+      "rare": false,
+      "species": [
+        "Among the"
+      ]
+    },
+    {
+      "id": "7612201fcdbe6465",
+      "title": "“Parachute science” is failing the tropics, home to more than 80% of insect species",
+      "link": "https://www.sciencedaily.com/releases/2026/09/260909005145.htm",
+      "summary": "Insects quietly hold much of the natural world together, yet conservation efforts are overlooking the tropical regions where more than 80 percent of insect species live. Monash University researchers have developed a global framework to close this gap by combining scientific studies with museum collections, local…",
+      "source": "ScienceDaily Zoology",
+      "source_id": "sciencedaily-zoology",
+      "date": "2026-09-09T06:30:55+00:00",
+      "score": 25,
+      "rare": false,
+      "species": [
+        "Parachute science",
+        "Insects quietly hold",
+        "University researchers have"
+      ]
+    },
+    {
+      "id": "316bae5b6eb695bc",
+      "title": "Plants may be evolving the wrong traits for a warming world",
+      "link": "https://www.sciencedaily.com/releases/2026/09/260901010719.htm",
+      "summary": "Morning glories may be getting caught in an evolutionary tug-of-war between surviving climate change and attracting increasingly scarce pollinators. Over just nine years, researchers found that the plants’ rate of adaptation plunged by 96%, even though they still had plenty of genetic diversity to evolve.",
+      "source": "ScienceDaily Ecology",
+      "source_id": "sciencedaily-ecology",
+      "date": "2026-09-04T03:02:07+00:00",
+      "score": 25,
+      "rare": false,
+      "species": [
+        "Plants may",
+        "Morning glories may",
+        "Over just nine"
+      ]
+    },
+    {
+      "id": "b0a40cb762f82426",
+      "title": "A coffee-table-size scorpion roamed Earth before forests existed",
+      "link": "https://www.sciencedaily.com/releases/2026/08/260831015200.htm",
+      "summary": "A meter-long scorpion with massive pincers stalked ancient Britain 415 million years ago, long before forests and the better-known age of giant insects. Its surprising size and possible semi-aquatic lifestyle could reshape ideas about how early arthropods became giants.",
+      "source": "ScienceDaily Zoology",
+      "source_id": "sciencedaily-zoology",
+      "date": "2026-09-02T13:23:16+00:00",
+      "score": 25,
+      "rare": false,
+      "species": [
+        "Earth before forests",
+        "Its surprising size"
+      ]
+    },
+    {
+      "id": "087b77c0774f2552",
+      "title": "Jumping spiders (genus Portia)",
+      "link": "https://www.nature.com/articles/s41559-026-03174-3",
+      "summary": "",
+      "source": "Nature (Entomology)",
+      "source_id": "nature-entomology",
+      "date": "2026-09-02T00:00:00+00:00",
+      "score": 25,
+      "rare": false,
+      "species": [
+        "Jumping spiders"
+      ]
+    },
+    {
+      "id": "268ca5a061ea5a3c",
+      "title": "How an IPM Lecture Started One Entomologist’s Career in Extension",
+      "link": "https://entomologytoday.org/2026/09/01/ipm-lecture-entomologist-extension-jermaine-perier-standout-early-career-professional/",
+      "summary": "Meet Jermaine Perier, Ph.D., professor and extension entomologist at Mississippi State University, expert in integrated pest management in vegetables, small fruit, and pecans, and subject of the next installment of our &#8220;Standout Early Career Professionals&#8221; series. During his Ph.D. work at the University…",
+      "source": "Entomology Today (ESA)",
+      "source_id": "entomology-today",
+      "date": "2026-09-01T17:15:33+00:00",
+      "score": 50,
+      "rare": false,
+      "species": []
+    },
+    {
+      "id": "37d5b0f965e77ca8",
+      "title": "Varroa mites escape the evolutionary trap of haplodiploidy",
+      "link": "https://www.nature.com/articles/s41467-026-77125-8",
+      "summary": "",
+      "source": "Nature (Entomology)",
+      "source_id": "nature-entomology",
+      "date": "2026-09-01T00:00:00+00:00",
+      "score": 25,
+      "rare": false,
+      "species": [
+        "Varroa mites escape"
+      ]
+    },
+    {
+      "id": "880f8624d984b945",
+      "title": "Multiple orthoflaviviruses secrete sfRNA in mosquito saliva to promote transmission by inhibiting MDA5-mediated early interferon response",
+      "link": "https://www.nature.com/articles/s41467-026-77288-4",
+      "summary": "",
+      "source": "Nature (Entomology)",
+      "source_id": "nature-entomology",
+      "date": "2026-08-29T00:00:00+00:00",
+      "score": 25,
+      "rare": false,
+      "species": [
+        "Multiple orthoflaviviruses secrete"
+      ]
+    },
+    {
+      "id": "b86e24c0776ee364",
+      "title": "Your dislike of eating bugs may be 9,000 years old",
+      "link": "https://www.sciencedaily.com/releases/2026/08/260827010516.htm",
+      "summary": "Ancient teeth and human DNA are revealing a surprising history of insect eating. Modern humans in northern Eurasia appear to have eaten insects only occasionally, while Neanderthals may have consumed them much more regularly. Populations near the tropics also retained genes that make insect exoskeletons easier to…",
+      "source": "ScienceDaily Zoology",
+      "source_id": "sciencedaily-zoology",
+      "date": "2026-08-27T12:18:38+00:00",
+      "score": 25,
+      "rare": false,
+      "species": [
+        "Your dislike",
+        "Ancient teeth and",
+        "Modern humans"
+      ]
+    },
+    {
+      "id": "4fc482e4d3a6ecb9",
+      "title": "Amphibious stem-insect sheds light on colonization of land",
+      "link": "https://www.nature.com/articles/s41586-026-10961-2",
+      "summary": "",
+      "source": "Nature (Entomology)",
+      "source_id": "nature-entomology",
+      "date": "2026-08-26T00:00:00+00:00",
+      "score": 50,
+      "rare": false,
+      "species": [
+        "Amphibious stem"
+      ]
+    },
+    {
+      "id": "31a36e101e2d97c0",
+      "title": "JNK signaling regulates reproductive trade-offs after Plasmodium infection in the malaria mosquito",
+      "link": "https://www.nature.com/articles/s42003-026-10762-3",
+      "summary": "",
+      "source": "Nature (Entomology)",
+      "source_id": "nature-entomology",
+      "date": "2026-08-26T00:00:00+00:00",
+      "score": 25,
+      "rare": false,
+      "species": [
+        "Plasmodium infection"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Rarissima — a minimal ledger of rare, obscure, cryptic, and newly described insect research from scientific feeds."
+    />
+    <title>Rarissima — Rare Insect Research Ledger</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23f7f3ea'/%3E%3Ccircle cx='32' cy='18' r='4' fill='%237a6a3a'/%3E%3Cline x1='32' y1='22' x2='32' y2='52' stroke='%232a2926' stroke-width='1.5'/%3E%3C/svg%3E" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to articles</a>
+
+    <header class="site-header">
+      <div class="wrap masthead">
+        <div class="brand-row">
+          <div class="brand">
+            <div class="pin">Specimen ledger</div>
+            <h1 class="site-title">Rari<em>ssima</em></h1>
+            <p class="subtitle">
+              Extremely rare, cryptic, rediscovered, and newly described insect research — curated from scientific feeds.
+            </p>
+          </div>
+          <div class="meta-panel" aria-label="Catalog metadata">
+            <div>Updated <strong id="updated">—</strong></div>
+            <div>Showing <strong id="count">—</strong></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="wrap">
+      <div class="toolbar" role="region" aria-label="Filters">
+        <div class="filters" role="group" aria-label="Article filters">
+          <button type="button" class="chip" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="chip" data-filter="rare" aria-pressed="false">Rare / cryptic</button>
+          <button type="button" class="chip" data-filter="research" aria-pressed="false">Broader entomology</button>
+        </div>
+        <div class="search">
+          <label class="visually-hidden" for="search" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Search articles</label>
+          <input id="search" type="search" placeholder="Search titles, taxa, sources…" autocomplete="off" />
+        </div>
+      </div>
+      <p id="status" class="status" role="status" aria-live="polite">Loading ledger…</p>
+    </div>
+
+    <main id="main" class="wrap">
+      <div id="articles" class="grid" aria-label="Article cards"></div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <p>
+          <strong>Rarissima</strong> aggregates public RSS/Atom and open research feeds.
+          Headlines and excerpts belong to their publishers; each card links to the original.
+        </p>
+        <p>
+          Sources may include Nature (Entomology), Entomology Today (ESA), Systematic Entomology,
+          ScienceDaily, Phys.org, Frontiers, and PubMed when available. Filtering favors rare,
+          cryptic, endangered, rediscovered, and taxonomic discoveries, with a broader entomology fallback.
+        </p>
+        <p class="colophon">REFRESH · python3 fetch.py &nbsp;·&nbsp; SERVE · python3 -m http.server 8765</p>
+      </div>
+    </footer>
+
+    <script src="js/app.js" defer></script>
+  </body>
+</html>
