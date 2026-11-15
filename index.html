@@ -5,60 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Rarissima — a minimal ledger of rare, obscure, cryptic, and newly described insect research from scientific feeds."
+      content="Rarissima — a ledger of rare, cryptic, rediscovered, and newly described insect research from scientific feeds."
     />
     <title>Rarissima — Rare Insect Research Ledger</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,400&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23f7f3ea'/%3E%3Ccircle cx='32' cy='18' r='4' fill='%237a6a3a'/%3E%3Cline x1='32' y1='22' x2='32' y2='52' stroke='%232a2926' stroke-width='1.5'/%3E%3C/svg%3E" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2307110e'/%3E%3Crect x='10' y='20' width='44' height='26' fill='%23dff64a'/%3E%3Cellipse cx='30' cy='33' rx='8' ry='6' fill='%2307110e'/%3E%3C/svg%3E" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to articles</a>
 
     <header class="site-header">
-      <div class="wrap masthead">
-        <div class="brand-row">
-          <div class="brand">
-            <div class="pin">Specimen ledger</div>
-            <div class="title-lockup">
-              <figure class="plate">
-                <img
-                  src="img/curtis-plate-71.webp"
-                  width="320"
-                  height="244"
-                  alt="Hand-colored engraving of a burying beetle, detail from Plate 71 of John Curtis’s British Entomology (1825)."
-                />
-              </figure>
-              <h1 class="site-title">Rari<em>ssima</em></h1>
-            </div>
-            <p class="subtitle">
-              Extremely rare, cryptic, rediscovered, and newly described insect research — curated from scientific feeds.
-            </p>
-          </div>
-          <div class="meta-panel" aria-label="Catalog metadata">
-            <div>Updated <strong id="updated">—</strong></div>
-            <div>Showing <strong id="count">—</strong></div>
+      <div class="wrap mast">
+        <div class="brand">
+          <figure class="plate">
+            <img
+              src="img/curtis-plate-71.webp"
+              width="320"
+              height="244"
+              alt="Hand-colored engraving of a burying beetle, detail from Plate 71 of John Curtis’s British Entomology (1825)."
+            />
+          </figure>
+          <div class="brand-copy">
+            <p class="eyebrow">Insect research ledger</p>
+            <h1 class="site-title">Rari<span>ssima</span></h1>
           </div>
         </div>
+        <p class="dek">
+          Extremely rare, cryptic, rediscovered, and newly described insect research — curated from scientific feeds.
+        </p>
+        <aside class="stats" aria-label="Catalog metadata">
+          <p class="stat">
+            <span>Catalogued</span>
+            <strong id="catalog">—</strong>
+          </p>
+          <p class="stat">
+            <span>Rare tagged</span>
+            <strong id="rare-total">—</strong>
+          </p>
+          <p class="stat stat-wide">
+            <span>Span</span>
+            <strong id="span">—</strong>
+          </p>
+          <div class="sparkline">
+            <span>Papers per month</span>
+            <div id="spark"></div>
+          </div>
+          <p class="updated">Updated <strong id="updated">—</strong></p>
+        </aside>
       </div>
+      <div class="scale" aria-hidden="true"></div>
     </header>
 
-    <div class="wrap">
-      <div class="toolbar" role="region" aria-label="Filters">
-        <div class="filters" role="group" aria-label="Article filters">
-          <button type="button" class="chip" data-filter="all" aria-pressed="true">All</button>
-          <button type="button" class="chip" data-filter="rare" aria-pressed="false">Rare / cryptic</button>
-          <button type="button" class="chip" data-filter="research" aria-pressed="false">Broader entomology</button>
-        </div>
-        <div class="search">
-          <label class="visually-hidden" for="search" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Search articles</label>
-          <input id="search" type="search" placeholder="Search titles, taxa, sources…" autocomplete="off" />
-        </div>
+    <div class="wrap tools" role="region" aria-label="Filters">
+      <div class="filters" role="group" aria-label="Article filters">
+        <button type="button" class="chip" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" class="chip" data-filter="rare" aria-pressed="false">Rare / cryptic</button>
+        <button type="button" class="chip" data-filter="research" aria-pressed="false">Broader entomology</button>
       </div>
-      <p id="status" class="status" role="status" aria-live="polite">Loading ledger…</p>
+      <div class="search" role="search">
+        <label for="search">Search</label>
+        <input id="search" type="search" placeholder="Titles, taxa, sources…" autocomplete="off" />
+      </div>
     </div>
+    <p id="status" class="status wrap" role="status" aria-live="polite">Loading ledger…</p>
 
     <main id="main" class="wrap">
-      <div id="articles" class="ledger" aria-label="Article cards"></div>
+      <div id="articles" class="ledger" aria-label="Article index"></div>
     </main>
 
     <footer class="site-footer">

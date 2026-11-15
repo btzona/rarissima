@@ -34,7 +34,7 @@ USER_AGENT = "RarissimaBot/1.0 (+https://github.com/btzona/rarissima)"
 TIMEOUT = 20
 # Daily refresh merges into the file. The cap keeps the page bounded while
 # reserving room for papers dated on or before April 2026.
-HISTORY_CAP = 180
+HISTORY_CAP = 1000
 HISTORY_FLOOR = datetime(2026, 4, 30, tzinfo=timezone.utc)
 ARCHIVE_ORDERS = (
     "Coleoptera OR Lepidoptera OR Hymenoptera OR Diptera OR Hemiptera "
