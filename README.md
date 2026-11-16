@@ -18,7 +18,7 @@ The job runs `python3 fetch.py`, copies `index.html`, `css/`, `js/`, and `data/`
 
 A feed that fails is logged and skipped. PubMed often blocks GitHub-hosted runners and returns an HTML warning instead of XML; that does not fail the build. If a run collects no articles at all, `fetch.py` leaves the existing `data/articles.json` in place and exits successfully.
 
-When a run does collect articles, it merges them into the ledger instead of replacing it. Europe PMC supplies older new-species and cryptic-insect papers, month by month, so the shelf keeps reaching back to April 2026. Duplicates collapse on DOI or title. The file is capped at 180 articles, and that cap reserves space for the earlier papers rather than keeping only this week's headlines. The page groups cards by month and offers “Show earlier specimens” so a longer archive stays readable.
+When a run does collect articles, it merges them into the ledger instead of replacing it. Europe PMC supplies older new-species and cryptic-insect papers, month by month, so the shelf keeps reaching back to April 2026. Duplicates collapse on DOI or title. The file is capped at 1,000 articles, and that cap reserves space for the earlier papers rather than keeping only this week's headlines. The page groups entries by month and offers “Show earlier specimens” so a longer archive stays readable.
 
 `configure-pages` is called with `enablement: true`. The workflow’s `GITHUB_TOKEN` cannot create a Pages site (that needs a personal access token, or a GitHub App with `administration:write` and `pages:write`). If this repository has never had Pages turned on, open **Settings → Pages → Build and deployment → Source** and choose **GitHub Actions** once. After that, this workflow can deploy on its own. The site is served from the `/rarissima/` project path; asset and data URLs in the page are relative (`css/style.css`, `js/app.js`, `data/articles.json`), so they resolve under that path.
 
@@ -50,7 +50,7 @@ Then open [http://127.0.0.1:8765/rarissima/](http://127.0.0.1:8765/rarissima/).
 | Path | Role |
 |------|------|
 | `index.html` | Page shell |
-| `css/style.css` | Museum-label / journal styling |
+| `css/style.css` | Editorial layout, type, and color |
 | `img/curtis-plate-71.webp` | Header plate, John Curtis, *British Entomology* (1825), public domain |
 | `js/app.js` | Loads `data/articles.json`, filters, month groups, italics for taxa |
 | `fetch.py` | Feed fetch, Europe PMC backfill, and rare/entomology heuristics. Not deployed. |
@@ -60,4 +60,4 @@ Then open [http://127.0.0.1:8765/rarissima/](http://127.0.0.1:8765/rarissima/).
 
 ## Design
 
-Cream paper, charcoal ink, a brass accent. Serif titles, a plain sans for body text, mono for the catalog metadata. The header carries a public-domain hand-colored engraving of a burying beetle (John Curtis, Plate 71 of *British Entomology*, 1825, via Wikimedia Commons); the footer repeats that credit. Cards link out; nothing is republished in full.
+Near-black elytra ground (`#07110e`) with chartreuse (`#dff64a`) for the wordmark, active filter, and data marks, fluorescent orange for rare flags, and an iridescent cyan for links. Headlines are Space Grotesk; body text is IBM Plex Sans; catalog metadata is IBM Plex Mono. The Curtis burying beetle is a small chartreuse duotone beside the title, credited in the footer. The page leads with a featured specimen, then an asymmetric month index rather than a uniform card grid. Nothing is republished in full.
