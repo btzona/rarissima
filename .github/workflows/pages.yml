@@ -62,10 +62,16 @@ jobs:
           enablement: true
 
       - name: Upload Pages artifact
+        # Artifacts belong to the run, not the attempt. A unique name lets a
+        # re-run upload and deploy its own artifact instead of colliding with
+        # the previous attempt's github-pages artifact.
         uses: actions/upload-pages-artifact@v5
         with:
           path: _site
+          name: github-pages-${{ github.run_attempt }}
 
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
+        with:
+          artifact_name: github-pages-${{ github.run_attempt }}
